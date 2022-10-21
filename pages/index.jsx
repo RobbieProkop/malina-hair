@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../components/Footer";
 import Header from "../components/header";
 import styles from "../styles/Home.module.css";
 
@@ -16,15 +17,7 @@ export default function Home() {
         <h1>Here is the Home Page</h1>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://www.instagram.com/creative.hair.styling/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram Logo Here
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }
