@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div>
+    <main>
       <h2>About Malina</h2>
       <div className="flex">
         <p>
@@ -15,7 +15,7 @@ const About = () => {
         </p>
         {/* <Image src={}/> */}
       </div>
-    </div>
+    </main>
   );
 };
 export default About;

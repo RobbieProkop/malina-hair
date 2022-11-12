@@ -3,13 +3,13 @@ const Header = () => {
     <div>
       <h3>Creative Hair Styling</h3>
 
-      <div>
+      <nav>
         <ul>
           <li>About</li>
           <li>Gallery</li>
           <li>Contact</li>
         </ul>
-      </div>
+      </nav>
     </div>
   );
 };
