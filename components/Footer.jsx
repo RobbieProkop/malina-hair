@@ -10,7 +10,7 @@ const Footer = () => {
         >
           Instagram
         </a>
-        | Site by <a href="https://dhaamadevs.com">DhammaDevs</a>
+        | Site by <a href="https://dhammadevs.com">DhammaDevs</a>
       </p>
     </div>
   );
