@@ -1,8 +1,8 @@
+import styles from "../styles/Home.module.scss";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Showcase from "../components/Showcase";
 import Nav from "../components/Nav";
-import styles from "../styles/Home.module.scss";
 import About from "../components/About";
 
 export default function Home() {

@@ -1,4 +1,7 @@
+@import "./variables";
+
 .footer {
+  background-color: $primary-color;
   display: flex;
   padding: 2rem 0;
   justify-content: center;
