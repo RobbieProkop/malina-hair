@@ -8,16 +8,16 @@ const Nav = () => {
         <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" />
       </div>
       <ul>
-        <li>
+        <li data-text="Home">
           <Link href="#">Home</Link>
         </li>
-        <li>
+        <li data-text="About">
+          <Link href="#">About</Link>
+        </li>
+        <li data-text="Portfolio">
           <Link href="#">Portfolio</Link>
         </li>
-        <li>
-          <Link href="#">Blog</Link>
-        </li>
-        <li>
+        <li data-text="Contact">
           <Link href="#">Contact</Link>
         </li>
       </ul>
