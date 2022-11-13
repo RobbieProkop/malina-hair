@@ -12,13 +12,13 @@ const Nav = () => {
           <Link href="#">Home</Link>
         </li>
         <li data-text="About">
-          <Link href="#">About</Link>
+          <Link href="#about">About</Link>
         </li>
         <li data-text="Portfolio">
-          <Link href="#">Portfolio</Link>
+          <Link href="#work">Portfolio</Link>
         </li>
         <li data-text="Contact">
-          <Link href="#">Contact</Link>
+          <Link href="#contact">Contact</Link>
         </li>
       </ul>
     </nav>
