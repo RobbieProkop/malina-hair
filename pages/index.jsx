@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
-import Header from "../components/header";
+import Showcase from "../components/Showcase";
+import Nav from "../components/Nav";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -11,8 +12,8 @@ export default function Home() {
         <meta name="description" content="Portfolio for Malina" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
+      <Nav />
+      <Showcase />
       <main>
         <h1>Here is the Home Page</h1>
       </main>
