@@ -1,9 +1,9 @@
-import styles from "../styles/Footer.module.scss";
+import { footer } from "../styles/Footer.module.scss";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <p>
+    <div>
+      <p className={footer}>
         Copyright &copy; 2023{" "}
         <a
           href="https://www.instagram.com/creative.hair.styling/"
