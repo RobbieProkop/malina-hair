@@ -1,16 +1,15 @@
 const Showcase = () => {
   return (
-    <div>
-      <h3>Creative Hair Styling</h3>
+    <header>
+      <h1>Creative Hair Styling</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, nemo!
+      </p>
 
-      <nav>
-        <ul>
-          <li>About</li>
-          <li>Gallery</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </div>
+      <button id="open" className="cta-btn">
+        Book an Appointment
+      </button>
+    </header>
   );
 };
 export default Showcase;
