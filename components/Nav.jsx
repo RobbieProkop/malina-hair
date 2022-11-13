@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { nav, logo } from "../styles/Nav.module.scss";
 
 const Nav = () => {
   return (
-    <nav>
-      <div class="logo">
+    <nav className={nav}>
+      <div class={logo}>
         <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" />
       </div>
       <ul>
