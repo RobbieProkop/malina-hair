@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.scss";
 import Head from "next/head";
 import Footer from "../components/Footer";
-import Showcase from "../components/Showcase";
+import Header from "../components/Header";
 import Nav from "../components/Nav";
 import About from "../components/About";
 
@@ -17,7 +17,7 @@ export default function Home() {
       <Nav />
 
       {/* Hero section */}
-      <Showcase />
+      <Header />
 
       {/* About Seciton */}
       <About />

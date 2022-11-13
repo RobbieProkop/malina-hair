@@ -1,4 +1,4 @@
-const Showcase = () => {
+const Header = () => {
   return (
     <header>
       <h1>Creative Hair Styling</h1>
@@ -12,4 +12,4 @@ const Showcase = () => {
     </header>
   );
 };
-export default Showcase;
+export default Header;
