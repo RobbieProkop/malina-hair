@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <main>
+    <main className="container">
       <h2>About Malina</h2>
       <div className="flex">
         <p>
