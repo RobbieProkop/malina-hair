@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <p className={footer}>
-        Copyright &copy; 2023{" "}
+        Creative Hair Styling &copy; 2023{" "}
         <a
           href="https://www.instagram.com/creative.hair.styling/"
           target="_blank"
