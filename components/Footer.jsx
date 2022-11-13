@@ -1,16 +1,21 @@
+import styles from "../styles/Footer.module.scss";
+
 const Footer = () => {
   return (
     <div className="footer">
       <p>
-        Copyright &copy; 2023
+        Copyright &copy; 2023{" "}
         <a
           href="https://www.instagram.com/creative.hair.styling/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram
+          Instagram{" "}
         </a>
-        | Site by <a href="https://dhammadevs.com">DhammaDevs</a>
+        | Site by{" "}
+        <a href="https://dhammadevs.com" target="_blank">
+          DhammaDevs
+        </a>
       </p>
     </div>
   );
