@@ -1,5 +1,28 @@
 @import "./variables";
 
-.about {
-  background-color: blue;
+.container {
+  header {
+    background-color: $primary-color;
+    color: $white;
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+
+    p {
+      margin: 30px 0;
+    }
+
+    .toggle {
+      position: absolute;
+      background-color: $blur;
+      background: url("../public/menu.png");
+    }
+  }
+}
+
+.toggle {
+  position: absolute;
+  background-color: $blur;
+  background: url("../public/menu.png");
 }

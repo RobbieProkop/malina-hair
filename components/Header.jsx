@@ -1,6 +1,13 @@
+import Image from "next/image";
+import { menu } from "../public/menu.png";
+
 const Header = () => {
   return (
     <header>
+      <button class="toggle" id="toggle">
+        <Image src={menu} />
+      </button>
+
       <h1>Creative Hair Styling</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, nemo!

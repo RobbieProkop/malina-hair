@@ -1,3 +1,5 @@
+@import "./variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,6 +23,54 @@ a {
 
 ul {
   list-style: none;
+}
+
+button,
+input[type="submit"] {
+  background-color: $secondary-color;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  padding: 8px 12px;
+
+  &:focus {
+    outline: none;
+  }
+}
+.container {
+  header {
+    background-color: $primary-color;
+    color: $white;
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+
+    p {
+      margin: 30px 0;
+    }
+
+    // .toggle {
+    //   position: absolute;
+    //   background-color: $blur;
+    //   background: url("../public/menu.png");
+    // }
+  }
+}
+
+.toggle {
+  position: absolute;
+  background-color: $blur;
+  top: 20px;
+  left: 20px;
+  color: $white;
+  span {
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
