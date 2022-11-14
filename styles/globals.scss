@@ -63,6 +63,14 @@ header {
   }
 }
 .container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+
+  h2 {
+    margin: 5px 0 10px 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
