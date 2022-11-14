@@ -1,8 +1,15 @@
 const Modal = () => {
+  const closeModal = (e) => {
+    e.preventDefault();
+
+    // const modalContainer = (document.getElementById("modal").style.display =
+    //   "none");
+  };
+
   return (
     <div className="modal-container" id="modal">
       <div className="modal">
-        <button className="close-btn" id="close">
+        <button className="close-btn" id="close" onClick={closeModal}>
           <strong>X</strong>
         </button>
         <div className="modal-header">
