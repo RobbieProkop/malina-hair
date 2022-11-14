@@ -3,7 +3,7 @@ const Modal = () => {
     <div className="modal-container" id="modal">
       <div className="modal">
         <button className="close-btn" id="close">
-          X
+          <strong>X</strong>
         </button>
         <div className="modal-header">
           <h3>Sign Up</h3>
