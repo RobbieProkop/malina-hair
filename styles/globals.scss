@@ -59,16 +59,8 @@ input[type="submit"] {
     .toggle {
       position: absolute;
       background-color: $blur;
-      background-image: url("../public/menu.png");
       top: 20px;
       left: 20px;
-      color: $white;
-      // span {
-      //   img {
-      //     width: 75px;
-      //     height: 75px;
-      //   }
-      // }
     }
   }
 }

@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { menu } from "../public/menu.png";
 
 const Header = () => {
   return (
     <header>
       <button className="toggle" id="toggle">
-        <Image src={menu} />
+        <Image src="/../public/menu.png" width="25px" height="25px" />
       </button>
 
       <h1>Creative Hair Styling</h1>
