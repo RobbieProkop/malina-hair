@@ -12,11 +12,6 @@ const Header = () => {
 
   const toggleNav = () => {
     document.body.classList.toggle("show-nav");
-
-    const toggle = document.getElementById("toggle");
-
-    console.log("toggle.children :>> ", toggle.children);
-
     if (document.body.classList.contains("show-nav")) {
       setImage("/../public/close.png");
     } else {
