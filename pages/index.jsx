@@ -7,7 +7,7 @@ import About from "../components/About";
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Creative Hair Styling</title>
         <meta name="description" content="Portfolio for Malina" />
@@ -15,21 +15,21 @@ export default function Home() {
       </Head>
       {/* NavBar as Sidebar */}
       <Nav />
-
       {/* Hero section */}
       <Header />
+      <div className="container">
+        {/* About Seciton */}
+        <About />
 
-      {/* About Seciton */}
-      <About />
+        {/* Icons */}
 
-      {/* Icons */}
+        {/* Previous work as moving Carousel*/}
 
-      {/* Previous work as moving Carousel*/}
+        {/* Favourite Products as static Carousel*/}
 
-      {/* Favourite Products as static Carousel*/}
-
-      {/* footer */}
+        {/* footer */}
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

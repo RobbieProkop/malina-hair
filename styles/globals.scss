@@ -38,26 +38,31 @@ input[type="submit"] {
     outline: none;
   }
 }
-.container {
-  header {
-    background-color: $primary-color;
-    color: $white;
-    font-size: 130%;
-    position: relative;
-    padding: 40px 15px;
-    text-align: center;
+header {
+  background-color: $primary-color;
+  color: $white;
+  font-size: 130%;
+  position: relative;
+  padding: 40px 15px;
+  text-align: center;
 
-    p {
-      margin: 30px 0;
-    }
-
-    .toggle {
-      position: absolute;
-      background-color: $blur;
-      top: 20px;
-      left: 20px;
-    }
+  p {
+    margin: 30px 0;
   }
+
+  .toggle {
+    position: absolute;
+    background-color: $blur;
+    top: 20px;
+    left: 20px;
+  }
+
+  .cta-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+  }
+}
+.container {
 }
 
 @media (prefers-color-scheme: dark) {
