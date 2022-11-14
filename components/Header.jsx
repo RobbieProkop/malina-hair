@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <button className="toggle" id="toggle">
-        <Image src="/../public/menu.png" width="25px" height="25px" />
+        <Image src="/../public/menu.png" width="30px" height="30px" />
       </button>
 
       <h1>Creative Hair Styling</h1>
