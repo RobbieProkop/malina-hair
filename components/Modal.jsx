@@ -2,12 +2,16 @@ const Modal = () => {
   const closeModal = (e) => {
     e.preventDefault();
 
-    // const modalContainer = (document.getElementById("modal").style.display =
-    //   "none");
+    if (
+      e.target.id === "modal" ||
+      e.target.id === "close" ||
+      e.target.parentElement.id === "close"
+    )
+      document.getElementById("modal").style.display = "none";
   };
 
   return (
-    <div className="modal-container" id="modal">
+    <div className="modal-container" id="modal" onClick={closeModal}>
       <div className="modal">
         <button className="close-btn" id="close" onClick={closeModal}>
           <strong>X</strong>
@@ -22,7 +26,7 @@ const Modal = () => {
 
           <form className="modal-form">
             <div>
-              <label for="name">Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -31,7 +35,7 @@ const Modal = () => {
               />
             </div>
             <div>
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -40,7 +44,7 @@ const Modal = () => {
               />
             </div>
             <div>
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
               <input
                 type="password"
                 id="password"
@@ -49,7 +53,7 @@ const Modal = () => {
               />
             </div>
             <div>
-              <label for="password2">Confirm Password</label>
+              <label htmlFor="password2">Confirm Password</label>
               <input
                 type="password"
                 id="password2"
