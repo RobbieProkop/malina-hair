@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import About from "../components/About";
+import Modal from "../components/Modal";
 
 export default function Home() {
   return (
@@ -26,9 +27,10 @@ export default function Home() {
         {/* Previous work as moving Carousel*/}
 
         {/* Favourite Products as static Carousel*/}
-
-        {/* footer */}
+        {/* Contact Modal */}
+        <Modal />
       </div>
+      {/* footer */}
       <Footer />
     </>
   );
