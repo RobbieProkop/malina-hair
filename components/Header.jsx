@@ -4,7 +4,7 @@ import { menu } from "../public/menu.png";
 const Header = () => {
   return (
     <header>
-      <button class="toggle" id="toggle">
+      <button className="toggle" id="toggle">
         <Image src={menu} />
       </button>
 

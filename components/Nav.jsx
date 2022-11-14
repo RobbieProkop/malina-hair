@@ -4,7 +4,7 @@ import { nav, logo } from "../styles/Nav.module.scss";
 const Nav = () => {
   return (
     <nav className={nav}>
-      <div class={logo}>
+      <div className={logo}>
         <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" />
       </div>
       <ul>
