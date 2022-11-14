@@ -55,6 +55,11 @@ header {
     background-color: $blur;
     top: 20px;
     left: 20px;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: rotate(10deg);
+    }
   }
 
   .cta-btn {
