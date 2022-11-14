@@ -1,6 +1,12 @@
 import Image from "next/image";
 
 const Header = () => {
+  const openModal = (e) => {
+    e.preventDefault();
+
+    document.getElementById("modal").style.display = "block";
+  };
+
   return (
     <header>
       <button className="toggle" id="toggle">
@@ -12,7 +18,7 @@ const Header = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, nemo!
       </p>
 
-      <button id="open" className="cta-btn">
+      <button id="open" className="cta-btn" onClick={openModal}>
         Book an Appointment
       </button>
     </header>
