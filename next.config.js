@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
 
-module.exports = nextConfig
+  images: {
+    domains: ["https://instagram.ftbs5-3.fna.fbcdn.net"],
+  },
+};
+
+module.exports = nextConfig;
