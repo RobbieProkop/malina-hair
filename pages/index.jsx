@@ -5,8 +5,20 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import About from "../components/About";
 import Modal from "../components/Modal";
+import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
+  const [img, setImage] = useState("/../public/menu.png");
+
+  const toggleNav = () => {
+    document.body.classList.toggle("show-nav");
+    if (document.body.classList.contains("show-nav")) {
+      setImage("/../public/close.png");
+    } else {
+      setImage("/../public/menu.png");
+    }
+  };
   return (
     <>
       <Head>
@@ -16,22 +28,27 @@ export default function Home() {
       </Head>
       {/* NavBar as Sidebar */}
       <Nav />
-      {/* Hero section */}
-      <Header />
       <div className="container">
-        {/* About Seciton */}
-        <About />
+        <button className="toggle" id="toggle" onClick={toggleNav}>
+          <Image src={img} width="30px" height="30px" />
+        </button>
+        {/* Hero section */}
+        <Header />
+        <div className="main-container">
+          {/* About Seciton */}
+          <About />
 
-        {/* Icons */}
+          {/* Icons */}
 
-        {/* Previous work as moving Carousel*/}
+          {/* Previous work as moving Carousel*/}
 
-        {/* Favourite Products as static Carousel*/}
-        {/* Contact Modal */}
-        <Modal />
+          {/* Favourite Products as static Carousel*/}
+          {/* Contact Modal */}
+          <Modal />
+        </div>
+        {/* footer */}
+        <Footer />
       </div>
-      {/* footer */}
-      <Footer />
     </>
   );
 }
