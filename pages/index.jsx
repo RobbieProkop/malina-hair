@@ -29,9 +29,6 @@ export default function Home() {
       {/* NavBar as Sidebar */}
       <Nav />
       <div className="container">
-        <button className="toggle" id="toggle" onClick={toggleNav}>
-          <Image src={img} width="30px" height="30px" />
-        </button>
         {/* Hero section */}
         <Header />
         <div className="main-container">
