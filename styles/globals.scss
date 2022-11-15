@@ -55,11 +55,10 @@ header {
   color: $text-color;
   font-size: 130%;
   position: relative;
-  padding: 40px 15px;
+  padding: 0 40px 15px;
   text-align: center;
   display: flex;
   align-items: center;
-  // justify-content: center;
   height: 45vh;
 
   .toggle {
