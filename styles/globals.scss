@@ -37,6 +37,15 @@ input[type="submit"] {
     outline: none;
   }
 }
+
+button {
+  color: $black;
+  transition: background-color, color, 0.5s;
+  &:hover {
+    background-color: $text-color;
+    color: $white;
+  }
+}
 header {
   background-color: $primary-color;
   color: $text-color;
