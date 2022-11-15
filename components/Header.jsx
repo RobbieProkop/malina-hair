@@ -24,6 +24,7 @@ const Header = () => {
       <button className="toggle" id="toggle" onClick={toggleNav}>
         <Image src={img} width="30px" height="30px" />
       </button>
+
       <div>
         <h1>Creative Hair Styling</h1>
         <p>

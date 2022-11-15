@@ -48,8 +48,10 @@ input[type="submit"] {
   margin-top: -100vh;
 }
 header {
-  background-color: $primary-color;
-  color: $text-color;
+  // background-color: $primary-color;
+  background: url("../public/hero-hair.jpeg") no-repeat center/cover;
+
+  color: $white;
   font-size: 130%;
   position: relative;
   padding: 0 40px 15px;
@@ -117,6 +119,7 @@ header {
       max-width: 100%;
       width: 400px;
       color: $dark;
+      animation: modalopen $modal-duration;
 
       .close-btn {
         background: transparent;
@@ -134,6 +137,7 @@ header {
       }
       .modal-content {
         padding: 20px;
+        background-color: #f0e9ea;
 
         .modal-form {
           div {
@@ -145,7 +149,7 @@ header {
             }
 
             .form-input {
-              background-color: $white;
+              background-color: $third-color;
               padding: 10px;
               width: 100%;
               border: 0;
@@ -169,6 +173,15 @@ header {
         }
       }
     }
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

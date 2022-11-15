@@ -40,6 +40,7 @@ export default function Home() {
           {/* Previous work as moving Carousel*/}
 
           {/* Favourite Products as static Carousel*/}
+
           {/* Contact Modal */}
           <Modal />
         </div>
