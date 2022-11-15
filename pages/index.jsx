@@ -7,6 +7,7 @@ import About from "../components/About";
 import Modal from "../components/Modal";
 import { useState } from "react";
 import Icons from "../components/Icons";
+import Work from "../components/Work";
 
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
@@ -39,6 +40,7 @@ export default function Home() {
           <Icons />
 
           {/* Previous work as moving Carousel*/}
+          <Work />
 
           {/* Favourite Products as static Carousel*/}
 
