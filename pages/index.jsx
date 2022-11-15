@@ -6,7 +6,7 @@ import Nav from "../components/Nav";
 import About from "../components/About";
 import Modal from "../components/Modal";
 import { useState } from "react";
-import Image from "next/image";
+import Icons from "../components/Icons";
 
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
@@ -31,11 +31,12 @@ export default function Home() {
       <div className="container">
         {/* Hero section */}
         <Header />
-        <div className="main-container">
+        <main className="main-container">
           {/* About Seciton */}
           <About />
 
           {/* Icons */}
+          <Icons />
 
           {/* Previous work as moving Carousel*/}
 
@@ -43,7 +44,7 @@ export default function Home() {
 
           {/* Contact Modal */}
           <Modal />
-        </div>
+        </main>
         {/* footer */}
         <Footer />
       </div>

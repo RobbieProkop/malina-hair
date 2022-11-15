@@ -1,9 +1,8 @@
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 const About = () => {
   return (
-    <main id="about" className={styles.about}>
+    <div id="about" className={styles.about}>
       <h2>About Malina</h2>
       <div className="flex">
         <p>
@@ -14,9 +13,8 @@ const About = () => {
           Ipsum, tenetur fugiat, praesentium maiores officiis aut iure pariatur
           quo nisi accusamus quos.å
         </p>
-        {/* <Image src={}/> */}
       </div>
-    </main>
+    </div>
   );
 };
 export default About;
