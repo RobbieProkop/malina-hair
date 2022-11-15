@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: transform 0.5s;
+  transition: transform $modal-duration;
 }
 
 html,
@@ -132,7 +132,7 @@ header {
 
       .modal-header {
         background: $primary-color;
-        color: $white;
+        color: $text-color;
         padding: 15px;
         border-bottom: 1px solid $dark;
       }
@@ -155,6 +155,7 @@ header {
               border: 0;
               border-bottom: 1px solid gray;
               color: $black;
+              font-family: inherit;
 
               &:focus,
               &:active {

@@ -20,9 +20,7 @@ const Modal = () => {
           <h3>Sign Up</h3>
         </div>
         <div className="modal-content">
-          <p>
-            Register to get weekly updates and tips for proper hair treatment
-          </p>
+          <p>How can I help you? Send me a message!</p>
 
           <form className="modal-form">
             <div>
@@ -44,6 +42,15 @@ const Modal = () => {
               />
             </div>
             <div>
+              <label htmlFor="textarea">Message</label>
+              <textarea
+                id="textarea"
+                className="form-input textarea"
+                placeholder="Write a message"
+                rows="5"
+              />
+            </div>
+            {/* <div>
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -60,7 +67,7 @@ const Modal = () => {
                 className="form-input"
                 placeholder="Confirm Your Password"
               />
-            </div>
+            </div> */}
             <input type="submit" value="Submit" className="submit-btn" />
           </form>
         </div>
