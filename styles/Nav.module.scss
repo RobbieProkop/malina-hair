@@ -3,7 +3,7 @@
 .nav {
   background-color: $primary-color;
   border-right: 2px solid $greyTransparent;
-  color: $white;
+  color: $text-color;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,9 +33,11 @@
       }
       a {
         transition: color 0.5s ease-in-out;
-        color: $white;
+        color: $text-color;
+        // font-weight: 500;
+        font-size: 1.5rem;
         &:hover {
-          color: $black;
+          color: $secondary-color;
         }
       }
     }
