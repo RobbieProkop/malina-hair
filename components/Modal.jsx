@@ -17,7 +17,7 @@ const Modal = () => {
           <strong>X</strong>
         </button>
         <div className="modal-header">
-          <h3>Sign Up</h3>
+          <h3>Book your next appointment!</h3>
         </div>
         <div className="modal-content">
           <p>How can I help you? Send me a message!</p>
@@ -50,24 +50,6 @@ const Modal = () => {
                 rows="5"
               />
             </div>
-            {/* <div>
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                className="form-input"
-                placeholder="Enter Your Password"
-              />
-            </div>
-            <div>
-              <label htmlFor="password2">Confirm Password</label>
-              <input
-                type="password"
-                id="password2"
-                className="form-input"
-                placeholder="Confirm Your Password"
-              />
-            </div> */}
             <input type="submit" value="Submit" className="submit-btn" />
           </form>
         </div>
