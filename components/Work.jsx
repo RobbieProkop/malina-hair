@@ -11,8 +11,14 @@ const Work = () => {
   // };
 
   // getPhotos();
+
+  // follow along for carousel at https://robkendal.co.uk/blog/how-to-build-a-multi-image-carousel-in-react-and-tailwind
   const movePrev = () => {};
   const moveNext = () => {};
+
+  const maxScrollWidth = useRef(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carousel = useRef(null);
   return (
     <section id="work" className="carousel">
       <h2>Check Out My Work</h2>
@@ -60,9 +66,10 @@ const Work = () => {
               <div className="carousel-item" key={index}>
                 <a href={resource.link}>
                   <Image
-                    src={recourse.imageUrl || ""}
+                    src={resource.imageUrl || ""}
                     alt={resource.title}
-                    objectFit="contain"
+                    width="100px"
+                    height="100px"
                   />
                 </a>
                 <h3>{resource.title}</h3>
