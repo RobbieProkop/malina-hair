@@ -148,12 +148,12 @@ header {
     .carousel-container {
       display: flex;
       justify-content: space-evenly;
-      grid-column: 2/5;
-      grid-gap: 10px;
+      // grid-gap: 10px;
       overflow: hidden;
 
       .carousel-item {
         position: relative;
+        text-align: center;
         height: 40rem;
         width: 40rem;
       }
