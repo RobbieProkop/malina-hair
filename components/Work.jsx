@@ -2,7 +2,6 @@ import Image from "next/image";
 import data from "../pages/api/workData.json";
 
 import { useState, useRef, useEffect } from "react";
-import { carouselStyle } from "../styles/Carousel.module.scss";
 
 const Work = () => {
   // const getPhotos = async () => {
@@ -21,7 +20,7 @@ const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
   return (
-    <section id="work" className={carouselStyle}>
+    <section id="work" className="carouselStyle">
       <div className="heading">
         <h2>Check Out My Work</h2>
         <div className="carousel-btn">

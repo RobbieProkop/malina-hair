@@ -127,6 +127,17 @@ header {
   }
 
   // Work Caoursel Section
+  .carouselStyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
 
   // Modal Section
   .modal-container {
