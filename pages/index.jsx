@@ -42,6 +42,8 @@ export default function Home() {
           {/* Previous work as moving Carousel*/}
           <Work />
 
+          {/* follow us on social media */}
+
           {/* Favourite Products as static Carousel*/}
 
           {/* Contact Modal */}
