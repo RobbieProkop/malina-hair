@@ -1,0 +1,10 @@
+@import "./variables";
+
+.carouselStyle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .heading {
+    background: blue;
+  }
+}

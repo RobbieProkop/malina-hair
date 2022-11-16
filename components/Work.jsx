@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { resources } from "../pages/api/workData.json";
+import data from "../pages/api/workData.json";
 
 import { useState, useRef, useEffect } from "react";
+import { carouselStyle } from "../styles/Carousel.module.scss";
 
 const Work = () => {
   // const getPhotos = async () => {
@@ -20,10 +21,10 @@ const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
   return (
-    <section id="work" className="carousel">
-      <h2>Check Out My Work</h2>
-      <div className="">
-        <div>
+    <section id="work" className={carouselStyle}>
+      <div className="heading">
+        <h2>Check Out My Work</h2>
+        <div className="carousel-btn">
           <button onClick={movePrev} className="prev-btn">
             {/* CHANGE THIS LATER */}
             <svg
@@ -60,8 +61,10 @@ const Work = () => {
             <span className="sr-only">Next</span>
           </button>
         </div>
-        <div className="carousel-container" ref={carousel}>
-          {resources.map((resource, index) => {
+      </div>
+      <div className="carousel-container">
+        <div className="images-container" ref={carousel}>
+          {data.resources.map((resource, index) => {
             return (
               <div className="carousel-item" key={index}>
                 <a href={resource.link}>
