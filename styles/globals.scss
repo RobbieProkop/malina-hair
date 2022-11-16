@@ -129,8 +129,7 @@ header {
   // Work Caoursel Section
   .carouselStyle {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: 1fr 3fr;
     .heading {
       display: flex;
       flex-direction: column;
@@ -151,6 +150,13 @@ header {
       justify-content: space-evenly;
       grid-column: 2/5;
       grid-gap: 10px;
+      overflow: hidden;
+
+      .carousel-item {
+        position: relative;
+        height: 40rem;
+        width: 40rem;
+      }
     }
   }
 

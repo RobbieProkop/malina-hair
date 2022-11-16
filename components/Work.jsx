@@ -65,12 +65,14 @@ const Work = () => {
         {data.resources.map((resource, index) => {
           return (
             <div className="carousel-item" key={index}>
-              <a href={resource.link}>
+              <a href={resource.link} target="_blank">
                 <Image
                   src={resource.imageUrl || ""}
                   alt={resource.title}
-                  width="1000"
-                  height="1000"
+                  // layout="fill"
+                  width="100px"
+                  height="100px"
+                  // objectFit="contain"
                 />
               </a>
               <h3>{resource.title}</h3>
