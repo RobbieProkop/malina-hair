@@ -136,6 +136,21 @@ header {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+      .carousel-btn {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+    }
+    .carousel-container {
+      display: flex;
+      justify-content: space-evenly;
+      grid-column: 2/5;
+      grid-gap: 10px;
     }
   }
 

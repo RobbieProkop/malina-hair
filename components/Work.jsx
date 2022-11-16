@@ -61,24 +61,22 @@ const Work = () => {
           </button>
         </div>
       </div>
-      <div className="carousel-container">
-        <div className="images-container" ref={carousel}>
-          {data.resources.map((resource, index) => {
-            return (
-              <div className="carousel-item" key={index}>
-                <a href={resource.link}>
-                  <Image
-                    src={resource.imageUrl || ""}
-                    alt={resource.title}
-                    width="100px"
-                    height="100px"
-                  />
-                </a>
-                <h3>{resource.title}</h3>
-              </div>
-            );
-          })}
-        </div>
+      <div className="carousel-container" ref={carousel}>
+        {data.resources.map((resource, index) => {
+          return (
+            <div className="carousel-item" key={index}>
+              <a href={resource.link}>
+                <Image
+                  src={resource.imageUrl || ""}
+                  alt={resource.title}
+                  width="1000"
+                  height="1000"
+                />
+              </a>
+              <h3>{resource.title}</h3>
+            </div>
+          );
+        })}
       </div>
     </section>
     // <div>
