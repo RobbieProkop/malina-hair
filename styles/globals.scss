@@ -152,6 +152,11 @@ header {
       position: relative;
       overflow: hidden;
       gap: 0.25rem;
+      scroll-behavior: smooth;
+      scroll-snap-type: x;
+      // scroll-snap-type: mandatory;
+      touch-action: pan-x;
+      z-index: 0;
 
       .carousel-item {
         position: relative;
