@@ -130,6 +130,7 @@ header {
   .carouselStyle {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    margin: 3rem 0;
 
     .heading {
       display: flex;
@@ -161,8 +162,9 @@ header {
       .carousel-item {
         position: relative;
         text-align: center;
-        height: 40rem;
-        width: 40rem;
+        height: 16rem;
+        width: 16rem;
+        scroll-snap-align: start;
         a {
           height: 100%;
           width: 100%;
