@@ -128,6 +128,7 @@ header {
       font-size: 1.2rem;
       position: relative;
       color: $black;
+      z-index: 10;
 
       &::before {
         content: "";
@@ -147,6 +148,19 @@ header {
   .flex-icons {
     display: flex;
     margin-top: 40px;
+    // position: relative;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: $secondary-color;
+    //   top: 0%;
+    //   left: 0%;
+    //   z-index: -1;
+    //   // transform: rotate(4deg);
+    // }
     .icon {
       padding: 20px;
       display: flex;
