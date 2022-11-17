@@ -30,6 +30,7 @@ const Work = () => {
       carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
     ) {
       setCurrentIndex((prevState) => prevState + 1);
+      console.log("currentIndex", currentIndex);
     }
   };
 
