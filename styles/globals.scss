@@ -47,21 +47,6 @@ input[type="submit"] {
 }
 .container {
   margin-top: -100vh;
-}
-
-//header
-header {
-  // background-color: $primary-color;
-  background: url("../public/hero-hair.jpeg") no-repeat center/cover;
-
-  color: $white;
-  font-size: 130%;
-  position: relative;
-  padding: 0 40px 15px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 45vh;
 
   .toggle {
     position: sticky;
@@ -76,6 +61,20 @@ header {
       transform: rotate(10deg);
     }
   }
+}
+
+//header
+header {
+  // background-color: $primary-color;
+  background: url("../public/hero-hair.jpeg") no-repeat center/cover;
+  color: $white;
+  font-size: 130%;
+  // position: relative;
+  padding: 0 40px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 55vh;
 
   div {
     width: 95vw;
