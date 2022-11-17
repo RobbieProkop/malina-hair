@@ -205,9 +205,9 @@ header {
       position: relative;
       overflow: hidden;
       gap: 0.25rem;
+      padding: 3rem 0;
       scroll-behavior: smooth;
       scroll-snap-type: x;
-      // scroll-snap-type: mandatory;
       touch-action: pan-x;
       z-index: 0;
 
@@ -217,11 +217,22 @@ header {
         height: 16rem;
         width: 16rem;
         scroll-snap-align: start;
+        transition: transform 0.5s ease-in-out;
+        background-color: $gray;
+        border-radius: 25px;
+        padding: 0.5rem 0;
+
+        &:hover {
+          transform: translateY(-1.2rem);
+        }
         a {
           height: 100%;
           width: 100%;
           display: block;
           aspect-ratio: 1/1;
+        }
+        h3 {
+          padding-top: 1rem;
         }
       }
     }
