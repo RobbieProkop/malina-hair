@@ -130,6 +130,7 @@ header {
   .carouselStyle {
     display: grid;
     grid-template-columns: 1fr 3fr;
+
     .heading {
       display: flex;
       flex-direction: column;
@@ -148,8 +149,9 @@ header {
     .carousel-container {
       display: flex;
       justify-content: space-evenly;
-      // grid-gap: 10px;
+      position: relative;
       overflow: hidden;
+      gap: 0.25rem;
 
       .carousel-item {
         position: relative;
