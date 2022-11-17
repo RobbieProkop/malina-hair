@@ -7,6 +7,7 @@
   transition: transform $modal-duration;
 }
 
+//base styles
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -46,19 +47,6 @@ input[type="submit"] {
 }
 .container {
   margin-top: -100vh;
-}
-header {
-  // background-color: $primary-color;
-  background: url("../public/hero-hair.jpeg") no-repeat center/cover;
-
-  color: $white;
-  font-size: 130%;
-  position: relative;
-  padding: 0 40px 15px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 45vh;
 
   .toggle {
     position: sticky;
@@ -73,6 +61,20 @@ header {
       transform: rotate(10deg);
     }
   }
+}
+
+//header
+header {
+  // background-color: $primary-color;
+  background: url("../public/hero-hair.jpeg") no-repeat center/cover;
+  color: $white;
+  font-size: 130%;
+  // position: relative;
+  padding: 0 40px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 55vh;
 
   div {
     width: 95vw;
@@ -87,6 +89,8 @@ header {
     font-size: 20px;
   }
 }
+
+// Main Section
 .main-container {
   padding: 15px;
   margin: 0 auto;
@@ -98,10 +102,64 @@ header {
     margin: 5px 0 10px 0;
   }
 
-  // icons
+  // About
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+
+    h2 {
+      align-self: flex-end;
+      margin-right: 5rem;
+      font-size: 2.5rem;
+      span {
+        font-style: italic;
+        border-bottom: 1px solid $white;
+        color: $secondary-color;
+      }
+    }
+
+    p {
+      padding: 1rem;
+      font-size: 1.2rem;
+      position: relative;
+      color: $black;
+      z-index: 10;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 130%;
+        background-color: $primary-color;
+        top: -15%;
+        left: 0%;
+        z-index: -1;
+        transform: rotate(4deg);
+      }
+    }
+  }
+
+  // icons under about
   .flex-icons {
     display: flex;
     margin-top: 40px;
+    // position: relative;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: $secondary-color;
+    //   top: 0%;
+    //   left: 0%;
+    //   z-index: -1;
+    //   // transform: rotate(4deg);
+    // }
     .icon {
       padding: 20px;
       display: flex;
@@ -120,7 +178,67 @@ header {
     }
   }
 
-  // modal
+  // Work Caoursel Section
+  .carouselStyle {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 3rem 0;
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+      .carousel-btn {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+    }
+    .carousel-container {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      overflow: hidden;
+      gap: 0.25rem;
+      padding: 3rem 0;
+      scroll-behavior: smooth;
+      scroll-snap-type: x;
+      touch-action: pan-x;
+      z-index: 0;
+
+      .carousel-item {
+        position: relative;
+        text-align: center;
+        height: 16rem;
+        width: 16rem;
+        scroll-snap-align: start;
+        transition: transform 0.5s ease-in-out;
+        background-color: $gray;
+        border-radius: 25px;
+        padding: 0.5rem 0;
+
+        &:hover {
+          transform: translateY(-1.2rem);
+        }
+        a {
+          height: 100%;
+          width: 100%;
+          display: block;
+          aspect-ratio: 1/1;
+        }
+        h3 {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  // Modal Section
   .modal-container {
     background-color: $modalContainer;
     display: none;

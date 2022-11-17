@@ -8,6 +8,7 @@ import Modal from "../components/Modal";
 import { useState } from "react";
 import Icons from "../components/Icons";
 import Work from "../components/Work";
+import Image from "next/image";
 
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
@@ -30,6 +31,9 @@ export default function Home() {
       {/* NavBar as Sidebar */}
       <Nav />
       <div className="container">
+        <button className="toggle" id="toggle" onClick={toggleNav}>
+          <Image src={img} width="30px" height="30px" />
+        </button>
         {/* Hero section */}
         <Header />
         <main className="main-container">
