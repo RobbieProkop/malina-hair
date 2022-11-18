@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div id="about" className="about">
+    <section id="about" className="about">
       <h2>
         My name is <span>Malina</span>
       </h2>
@@ -20,7 +20,7 @@ const About = () => {
           Nguyen Phone (403)467-4464 Email Malina@creativehairstyling.co
           Instagram @creative.hair.styling Facebook creative hairstyling</p> */}
       </div>
-    </div>
+    </section>
   );
 };
 export default About;
