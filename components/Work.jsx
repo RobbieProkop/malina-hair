@@ -4,52 +4,27 @@ import data from "../pages/api/workData.json";
 import { useState, useRef, useEffect } from "react";
 
 const Work = () => {
-  // const getPhotos = async () => {
-  //   const res = await fetch("../pages/api/workData.json");
-  //   const data = await res.json;
-  //   console.log("data", data);
-  // };
-
-  // getPhotos();
-
   // follow along for carousel at https://robkendal.co.uk/blog/how-to-build-a-multi-image-carousel-in-react-and-tailwind
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
 
   const movePrev = () => {
-    if (currentIndex >= 0) {
-      setCurrentIndex((prevState) => prevState - 1);
-    }
-    console.log("currentIndex", currentIndex);
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide
+      ? data.resources.length - 4
+      : currentIndex - 1;
+    setCurrentIndex(newIndex);
   };
 
   const moveNext = () => {
-    if (
-      carousel.current !== null &&
-      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
-    ) {
-      setCurrentIndex((prevState) => prevState + 1);
-      console.log("currentIndex", currentIndex);
-    }
-  };
-
-  const isDisabled = (direction) => {
-    if (direction === "prev") {
-      return currentIndex <= 0;
-    }
-
-    if (direction === "next" && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
-
-    return false;
+    // -4 should change depending on how many items are in the data.resources array
+    const isLastSlide = currentIndex === data.resources.length - 4;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
   };
 
   useEffect(() => {
-    console.log("currentIndex :>> ", currentIndex);
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - carousel.current.offsetWidth
       : 0;
@@ -57,9 +32,21 @@ const Work = () => {
 
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
-      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
+      // carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
+      // each card is 256px, so we want to scroll 256px each click
+
+      carousel.current.scrollLeft =
+        256 * (currentIndex !== 0 ? currentIndex : -1);
     }
   }, [currentIndex]);
+
+  setTimeout(() => {
+    // again, change -4 depending on the length of the data array
+    if (currentIndex !== data.resources.length - 4) {
+      return setCurrentIndex(currentIndex + 1);
+    }
+    setCurrentIndex(0);
+  }, 3000);
 
   return (
     <section id="work" className="carouselStyle">
@@ -69,7 +56,7 @@ const Work = () => {
           <button
             onClick={movePrev}
             className="prev-btn"
-            disabled={isDisabled("prev")}
+            // disabled={isDisabled("prev")}
           >
             {/* CHANGE THIS LATER */}
             <svg
@@ -91,7 +78,7 @@ const Work = () => {
           <button
             onClick={moveNext}
             className="next-btn"
-            disabled={isDisabled("next")}
+            // disabled={isDisabled("next")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -111,6 +98,7 @@ const Work = () => {
           </button>
         </div>
       </div>
+      {/* <div className="carousel-container"> */}
       <div className="carousel-container" ref={carousel}>
         {data.resources.map((resource, index) => {
           return (
