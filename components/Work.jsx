@@ -50,51 +50,53 @@ const Work = () => {
   return (
     <section id="work" className="carouselStyle">
       <div className="heading">
-        <h2>Check Out My Work</h2>
-        <div className="carousel-btn">
-          <button
-            onClick={movePrev}
-            className="prev-btn"
-            // disabled={isDisabled("prev")}
-          >
-            {/* CHANGE THIS LATER */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+        <div className="heading-container">
+          <h2>Check Out My Work</h2>
+          <div className="carousel-btn">
+            <button
+              onClick={movePrev}
+              className="prev-btn"
+              // disabled={isDisabled("prev")}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            <span className="sr-only">Prev</span>
-          </button>
-          <button
-            onClick={moveNext}
-            className="next-btn"
-            // disabled={isDisabled("next")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+              {/* CHANGE THIS LATER */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-20 -ml-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              <span className="sr-only">Prev</span>
+            </button>
+            <button
+              onClick={moveNext}
+              className="next-btn"
+              // disabled={isDisabled("next")}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-20 -ml-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              <span className="sr-only">Next</span>
+            </button>
+          </div>
         </div>
       </div>
       {/* <div className="carousel-container"> */}
