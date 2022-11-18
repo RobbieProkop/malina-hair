@@ -114,8 +114,13 @@ const Work = () => {
       <div className="carousel-container" ref={carousel}>
         {data.resources.map((resource, index) => {
           return (
-            <div className="carousel-item" key={index}>
-              <a href={resource.link} target="_blank">
+            <a
+              className="carousel-item"
+              key={index}
+              href={resource.link}
+              target="_blank"
+            >
+              <div className="image-container">
                 <Image
                   src={resource.imageUrl || ""}
                   alt={resource.title}
@@ -124,10 +129,10 @@ const Work = () => {
                   // height="100px"
                   objectFit="contain"
                 />
-              </a>
+              </div>
               <h3>{resource.title}</h3>
               <p>{resource.desc}</p>
-            </div>
+            </a>
           );
         })}
       </div>
