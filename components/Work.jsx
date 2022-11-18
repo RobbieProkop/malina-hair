@@ -32,7 +32,6 @@ const Work = () => {
 
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
-      // carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
       // each card is 256px, so we want to scroll 256px each click
 
       carousel.current.scrollLeft =
@@ -40,13 +39,13 @@ const Work = () => {
     }
   }, [currentIndex]);
 
-  setTimeout(() => {
-    // again, change -4 depending on the length of the data array
-    if (currentIndex !== data.resources.length - 4) {
-      return setCurrentIndex(currentIndex + 1);
-    }
-    setCurrentIndex(0);
-  }, 3000);
+  // setTimeout(() => {
+  //   // again, change -4 depending on the length of the data array
+  //   if (currentIndex !== data.resources.length - 4) {
+  //     return setCurrentIndex(currentIndex + 1);
+  //   }
+  //   setCurrentIndex(0);
+  // }, 3000);
 
   return (
     <section id="work" className="carouselStyle">
