@@ -125,7 +125,8 @@ const Work = () => {
                   objectFit="contain"
                 />
               </a>
-              {/* <h3>{resource.title}</h3> */}
+              <h3>{resource.title}</h3>
+              <p>{resource.desc}</p>
             </div>
           );
         })}
