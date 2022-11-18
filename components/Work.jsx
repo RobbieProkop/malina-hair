@@ -12,14 +12,14 @@ const Work = () => {
   const movePrev = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide
-      ? data.resources.length - 4
+      ? data.resources.length - 3
       : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const moveNext = () => {
     // -4 should change depending on how many items are in the data.resources array
-    const isLastSlide = currentIndex === data.resources.length - 4;
+    const isLastSlide = currentIndex === data.resources.length - 3;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -35,7 +35,7 @@ const Work = () => {
       // each card is 256px, so we want to scroll 256px each click
 
       carousel.current.scrollLeft =
-        256 * (currentIndex !== 0 ? currentIndex : -1);
+        246 * (currentIndex !== 0 ? currentIndex : -1);
     }
   }, [currentIndex]);
 
