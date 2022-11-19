@@ -199,10 +199,11 @@ header {
         flex-direction: column;
         min-height: 360px;
         max-height: 440px;
+        text-align: center;
         justify-content: space-between;
         align-items: center;
         h2 {
-          font-size: 1.8rem;
+          font-size: 2.5rem;
         }
         .carousel-btn {
           display: flex;
@@ -256,6 +257,39 @@ header {
           padding-top: -1rem;
           // padding-bottom: 2rem;
         }
+      }
+    }
+  }
+
+  //Favourite products Carousel
+  .carousel-reverse {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    position: relative;
+    margin: 6rem 0;
+    z-index: 10;
+    color: $black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 110%;
+      height: 100%;
+      background-color: $primary-color;
+      top: 0%;
+      left: -5%;
+      z-index: -1;
+      transform: rotate(-4deg);
+    }
+
+    .heading {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+
+    .carousel-container {
+      .carousel-item {
+        background: rgba(255, 255, 255, 0.4);
       }
     }
   }

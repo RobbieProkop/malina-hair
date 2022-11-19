@@ -4,20 +4,22 @@ import data from "../pages/api/workData.json";
 import { useState, useRef, useEffect } from "react";
 
 const Favourites = () => {
-  // follow along for carousel at https://robkendal.co.uk/blog/how-to-build-a-multi-image-carousel-in-react-and-tailwind
-  const maxScrollWidth = useRef(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // initial value set to length of array -3
+  const maxScrollWidth = useRef(7);
+  const [currentIndex, setCurrentIndex] = useState(7);
   const carousel = useRef(null);
 
-  const movePrev = () => {
+  const moveNext = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide
       ? data.resources.length - 3
       : currentIndex - 1;
     setCurrentIndex(newIndex);
+    console.log("currentIndex", currentIndex);
+    console.log("newIndex :>> ", newIndex);
   };
 
-  const moveNext = () => {
+  const movePrev = () => {
     // -4 should change depending on how many items are in the data.resources array
     const isLastSlide = currentIndex === data.resources.length - 3;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -25,9 +27,11 @@ const Favourites = () => {
   };
 
   useEffect(() => {
+    console.log("currentIndex", currentIndex);
+
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - carousel.current.offsetWidth
-      : 0;
+      : 7;
   }, []);
 
   useEffect(() => {
@@ -39,67 +43,8 @@ const Favourites = () => {
     }
   }, [currentIndex]);
 
-  // setTimeout(() => {
-  //   // again, change -4 depending on the length of the data array
-  //   if (currentIndex !== data.resources.length - 4) {
-  //     return setCurrentIndex(currentIndex + 1);
-  //   }
-  //   setCurrentIndex(0);
-  // }, 3000);
-
   return (
-    <section id="work" className="carouselStyle">
-      <div className="heading">
-        <div className="heading-container">
-          <h2>Check Out My Work</h2>
-          <div className="carousel-btn">
-            <button
-              onClick={movePrev}
-              className="prev-btn"
-              // disabled={isDisabled("prev")}
-            >
-              {/* CHANGE THIS LATER */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-20 -ml-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              <span className="sr-only">Prev</span>
-            </button>
-            <button
-              onClick={moveNext}
-              className="next-btn"
-              // disabled={isDisabled("next")}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-20 -ml-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-              <span className="sr-only">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* <div className="carousel-container"> */}
+    <section id="favourites" className="carouselStyle carousel-reverse">
       <div className="carousel-container" ref={carousel}>
         {data.resources.map((resource, index) => {
           return (
@@ -125,16 +70,49 @@ const Favourites = () => {
           );
         })}
       </div>
+      <div className="heading">
+        <div className="heading-container">
+          <h2>Here are my favourite products</h2>
+          <div className="carousel-btn">
+            <button onClick={moveNext} className="prev-btn">
+              {/* CHANGE THIS LATER */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-20 -ml-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              <span className="sr-only">Next</span>
+            </button>
+            <button onClick={movePrev} className="next-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-20 -ml-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+              <span className="sr-only">Prev</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
-    // <div>
-    //   {resources.map((resource) => {
-    //     return (
-    //       <a key={resource.link} href={resource.imageUrl} target="_blank">
-    //         <Image src={resource.imageUrl} width="50px" height="50px" />
-    //       </a>
-    //     );
-    //   })}
-    // </div>
   );
 };
 export default Favourites;
