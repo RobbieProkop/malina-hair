@@ -329,7 +329,10 @@ header {
         gap: 10px;
       }
       a {
+        display: flex;
+        justify-content: space-between;
         border-bottom: none;
+        width: 80%;
       }
     }
   }
