@@ -320,6 +320,7 @@ header {
     //contact section
     &.column {
       flex-direction: column;
+      border-bottom: none;
 
       .cta-btn {
         margin: 2rem 0;
@@ -333,6 +334,10 @@ header {
         justify-content: space-between;
         border-bottom: none;
         width: 80%;
+
+        h4 {
+          border-bottom: 1px solid $secondary-color;
+        }
       }
     }
   }
