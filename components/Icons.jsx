@@ -1,3 +1,7 @@
+import color from "../public/icons/color.png";
+import hair from "../public/icons/hair.png";
+import scissors from "../public/icons/scissors.png";
+
 const Icons = () => {
   return (
     <div className="flex-icons">
