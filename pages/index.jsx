@@ -9,6 +9,7 @@ import { useState } from "react";
 import Icons from "../components/Icons";
 import Work from "../components/Work";
 import Image from "next/image";
+import MoreInfo from "../components/MoreInfo";
 
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
@@ -47,6 +48,7 @@ export default function Home() {
           <Work />
 
           {/* follow us on social media */}
+          <MoreInfo />
 
           {/* Favourite Products as static Carousel*/}
 
