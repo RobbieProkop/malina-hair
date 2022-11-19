@@ -10,5 +10,9 @@
 
   a {
     margin: 0 5px;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }

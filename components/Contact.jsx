@@ -40,7 +40,7 @@ const Contact = () => {
           <span>
             <Image src={phone} width={48} height={48} />
           </span>
-          <h4>(403)467-4464</h4>
+          <h4>(403) 467-4464</h4>
         </a>{" "}
         {/* email */}
         <a href="mailto:malina@creativehairstyling.co" target="_blank">
@@ -49,9 +49,6 @@ const Contact = () => {
           </span>
           <h4>malina@creativehairstyling.co</h4>
         </a>{" "}
-        {/* <p>Malina
-          Nguyen Phone (403)467-4464 Email Malina@creativehairstyling.co
-          Instagram @creative.hair.styling Facebook creative hairstyling</p> */}
       </div>
     </section>
   );
