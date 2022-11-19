@@ -10,6 +10,7 @@ import Icons from "../components/Icons";
 import Work from "../components/Work";
 import Image from "next/image";
 import MoreInfo from "../components/MoreInfo";
+import Favourites from "../components/Favourites";
 
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
@@ -51,6 +52,7 @@ export default function Home() {
           <MoreInfo />
 
           {/* Favourite Products as static Carousel*/}
+          <Favourites />
 
           {/* Contact Modal */}
           <Modal />
