@@ -45,6 +45,13 @@ input[type="submit"] {
     color: $white;
   }
 }
+
+// mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   margin-top: -100vh;
 
@@ -255,17 +262,16 @@ header {
 
   // More Info
   .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     gap: 10px;
     font-size: 2rem;
+    border-bottom: 2px solid $white;
+    padding-bottom: 3rem;
 
     a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center();
       gap: 10px;
+      border-bottom: 1px solid $secondary-color;
 
       &:hover {
         color: $secondary-color;
@@ -273,7 +279,6 @@ header {
         span {
           opacity: 0.7;
           transform: rotate3d(1, 1, 0, 3.142rad);
-          // transform: rotate(3.143rad);
         }
       }
     }
