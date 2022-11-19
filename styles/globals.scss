@@ -45,6 +45,11 @@ input[type="submit"] {
     color: $white;
   }
 }
+.cta-btn {
+  padding: 1.2rem 2.3rem;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 // mixins
 @mixin flex-center {
@@ -89,11 +94,6 @@ header {
 
   p {
     margin: 30px 0;
-  }
-
-  .cta-btn {
-    padding: 12px 30px;
-    font-size: 20px;
   }
 }
 
@@ -294,17 +294,13 @@ header {
     }
   }
 
-  // More Info
+  // More Info && Contact
   .flex-center {
     @include flex-center();
     gap: 10px;
     font-size: 2rem;
     border-bottom: 2px solid $white;
     padding-bottom: 3rem;
-
-    &.column {
-      flex-direction: column;
-    }
 
     a {
       @include flex-center();
@@ -318,6 +314,22 @@ header {
           opacity: 0.7;
           transform: rotate3d(1, 1, 0, 3.142rad);
         }
+      }
+    }
+
+    //contact section
+    &.column {
+      flex-direction: column;
+
+      .cta-btn {
+        margin: 2rem 0;
+      }
+      h3 {
+        @include flex-center();
+        gap: 10px;
+      }
+      a {
+        border-bottom: none;
       }
     }
   }

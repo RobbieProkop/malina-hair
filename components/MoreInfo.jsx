@@ -5,7 +5,7 @@ const MoreInfo = () => {
   return (
     <section>
       <div className="flex-center">
-        <h2>Find More Examples</h2>
+        <h2>Find More</h2>
         <a
           href="https://www.instagram.com/creative.hair.styling/ "
           target="_blank"
