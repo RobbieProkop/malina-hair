@@ -14,10 +14,18 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: black;
+  // overflow-x: hidden;
+
   &.show-nav {
-    transform: translateX(200px);
-    overflow-x: hidden;
+    .Nav_nav__bbBcN,
+    .toggle {
+      transform: translateX(0px);
+      position: sticky;
+    }
   }
+  // #__next {
+  //   display: flex;
+  // }
 }
 
 a {
@@ -75,6 +83,14 @@ input[type="submit"] {
       transform: rotate(10deg);
     }
   }
+
+  &:hover {
+    // transform: translateX(-200px) rotate(10deg);
+  }
+}
+.container {
+  // transform: translateX(-310px);
+  transform: translateY(-100vh);
 }
 
 //header
