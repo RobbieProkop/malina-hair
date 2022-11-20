@@ -126,15 +126,6 @@ const Work = () => {
         })}
       </div>
     </section>
-    // <div>
-    //   {resources.map((resource) => {
-    //     return (
-    //       <a key={resource.link} href={resource.imageUrl} target="_blank">
-    //         <Image src={resource.imageUrl} width="50px" height="50px" />
-    //       </a>
-    //     );
-    //   })}
-    // </div>
   );
 };
 export default Work;

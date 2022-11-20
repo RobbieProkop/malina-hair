@@ -1,5 +1,13 @@
 @import "./variables";
 
+// .navContainer {
+//   display: flex;
+//   // align-items: flex-start;
+//   justify-content: space-between;
+//   min-width: 310px;
+//   z-index: 100;
+// }
+
 .nav {
   background-color: $primary-color;
   border-right: 2px solid $greyTransparent;
@@ -7,6 +15,7 @@
   position: sticky;
   top: 0;
   // left: 0;
+  // min-width: 200px;
   width: 200px;
   height: 100vh;
   z-index: 100;

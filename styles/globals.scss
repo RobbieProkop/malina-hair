@@ -12,10 +12,20 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  background: black;
+  // overflow-x: hidden;
+
   &.show-nav {
-    transform: translateX(200px);
-    overflow-x: hidden;
+    .Nav_nav__bbBcN,
+    .toggle {
+      transform: translateX(0px);
+      position: sticky;
+    }
   }
+  // #__next {
+  //   display: flex;
+  // }
 }
 
 a {
@@ -45,6 +55,11 @@ input[type="submit"] {
     color: $white;
   }
 }
+.cta-btn {
+  padding: 1.2rem 2.3rem;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 // mixins
 @mixin flex-center {
@@ -53,7 +68,7 @@ input[type="submit"] {
   align-items: center;
 }
 .container {
-  margin-top: -100vh;
+  margin-top: -106vh;
 
   .toggle {
     position: sticky;
@@ -68,6 +83,14 @@ input[type="submit"] {
       transform: rotate(10deg);
     }
   }
+
+  &:hover {
+    // transform: translateX(-200px) rotate(10deg);
+  }
+}
+.container {
+  // transform: translateX(-310px);
+  transform: translateY(-100vh);
 }
 
 //header
@@ -85,15 +108,14 @@ header {
 
   div {
     width: 95vw;
-  }
 
-  p {
-    margin: 30px 0;
-  }
-
-  .cta-btn {
-    padding: 12px 30px;
-    font-size: 20px;
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 2rem;
+      margin: 30px 0;
+    }
   }
 }
 
@@ -174,6 +196,7 @@ header {
 
       p {
         font-size: 1.5rem;
+        margin-top: 2rem;
       }
     }
   }
@@ -294,7 +317,7 @@ header {
     }
   }
 
-  // More Info
+  // More Info && Contact
   .flex-center {
     @include flex-center();
     gap: 10px;
@@ -313,6 +336,30 @@ header {
         span {
           opacity: 0.7;
           transform: rotate3d(1, 1, 0, 3.142rad);
+        }
+      }
+    }
+
+    //contact section
+    &.column {
+      flex-direction: column;
+      border-bottom: none;
+
+      .cta-btn {
+        margin: 2rem 0;
+      }
+      h3 {
+        @include flex-center();
+        gap: 10px;
+      }
+      a {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: none;
+        width: 80%;
+
+        h4 {
+          border-bottom: 1px solid $secondary-color;
         }
       }
     }
@@ -407,12 +454,12 @@ header {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }

@@ -11,18 +11,30 @@ import Work from "../components/Work";
 import Image from "next/image";
 import MoreInfo from "../components/MoreInfo";
 import Favourites from "../components/Favourites";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
 
+  // const onScroll = () => {
+  //   window.addEventListener("scroll", () => {
+  //     const toggle = document.getElementById("toggle");
+
+  //     toggle.style.position = sticky;
+  //   });
+  // };
+
   const toggleNav = () => {
+    const toggle = document.getElementById("toggle");
     document.body.classList.toggle("show-nav");
+    toggle.classList.toggle("move-tog");
     if (document.body.classList.contains("show-nav")) {
       setImage("/../public/close.png");
     } else {
       setImage("/../public/menu.png");
     }
   };
+
   return (
     <>
       <Head>
@@ -33,8 +45,13 @@ export default function Home() {
       {/* NavBar as Sidebar */}
       <Nav />
       <div className="container">
-        <button className="toggle" id="toggle" onClick={toggleNav}>
-          <Image src={img} width="30px" height="30px" />
+        <button
+          className="toggle"
+          id="toggle"
+          onClick={toggleNav}
+          // onScroll={onScroll}
+        >
+          <Image alt="nav-icon" src={img} width="30px" height="30px" />
         </button>
         {/* Hero section */}
         <Header />
@@ -53,6 +70,9 @@ export default function Home() {
 
           {/* Favourite Products as static Carousel*/}
           <Favourites />
+
+          {/* Contact info */}
+          <Contact />
 
           {/* Contact Modal */}
           <Modal />

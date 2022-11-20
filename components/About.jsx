@@ -16,9 +16,6 @@ const About = () => {
           with personalized care, from the beginning to end, you will leave with
           confidence and satisfaction. Can&apos;t wait to meet you.
         </p>
-        {/* <p>Malina
-          Nguyen Phone (403)467-4464 Email Malina@creativehairstyling.co
-          Instagram @creative.hair.styling Facebook creative hairstyling</p> */}
       </div>
     </section>
   );

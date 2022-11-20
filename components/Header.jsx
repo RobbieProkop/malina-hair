@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header id="header">
       {/* <button className="toggle" id="toggle" onClick={toggleNav}>
         <Image src={img} width="30px" height="30px" />
       </button> */}
