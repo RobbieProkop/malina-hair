@@ -64,9 +64,10 @@ input[type="submit"] {
 }
 .container {
   // margin-top: -100vh;
+  position: relative;
 
   .toggle {
-    position: sticky;
+    position: absolute;
     align-self: flex-start;
     background-color: $blur;
     top: 20px;
