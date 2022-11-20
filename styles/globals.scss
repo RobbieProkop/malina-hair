@@ -14,10 +14,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: black;
+  overflow-x: hidden;
 
   &.show-nav {
-    transform: translateX(200px);
-    overflow-x: hidden;
+    .Nav_nav__bbBcN,
+    .toggle {
+      transform: translateX(0px);
+    }
   }
   #__next {
     display: flex;

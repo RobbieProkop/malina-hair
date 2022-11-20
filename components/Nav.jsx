@@ -15,6 +15,8 @@ const Nav = () => {
   };
 
   const toggleNav = () => {
+    // const container = document.querySelector(".navontainer");
+
     document.body.classList.toggle("show-nav");
     if (document.body.classList.contains("show-nav")) {
       setImage("/../public/close.png");
