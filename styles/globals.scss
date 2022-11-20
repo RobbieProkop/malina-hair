@@ -71,13 +71,15 @@ input[type="submit"] {
   left: 20px;
   transition: transform 0.5s;
   z-index: 100;
+  transform: translateX(-200px);
 
   &:hover {
-    transform: rotate(10deg);
+    // transform: translateX(-200px);
+    // transform: rotate(10deg);
   }
 }
 .container {
-  transform: translateX(-200px);
+  transform: translateX(-310px);
 }
 
 //header
