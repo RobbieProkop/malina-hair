@@ -16,6 +16,14 @@ import Contact from "../components/Contact";
 export default function Home() {
   const [img, setImage] = useState("/../public/menu.png");
 
+  const onScroll = () => {
+    window.addEventListener("scroll", () => {
+      const toggle = document.getElementById("toggle");
+
+      toggle.style.position = sticky;
+    });
+  };
+
   const toggleNav = () => {
     document.body.classList.toggle("show-nav");
     if (document.body.classList.contains("show-nav")) {
@@ -24,6 +32,7 @@ export default function Home() {
       setImage("/../public/menu.png");
     }
   };
+
   return (
     <>
       <Head>
@@ -34,7 +43,12 @@ export default function Home() {
       {/* NavBar as Sidebar */}
       <Nav />
       <div className="container">
-        <button className="toggle" id="toggle" onClick={toggleNav}>
+        <button
+          className="toggle"
+          id="toggle"
+          onClick={toggleNav}
+          onScroll={onScroll}
+        >
           <Image alt="nav-icon" src={img} width="30px" height="30px" />
         </button>
         {/* Hero section */}
