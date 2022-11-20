@@ -14,7 +14,7 @@ import Favourites from "../components/Favourites";
 import Contact from "../components/Contact";
 
 export default function Home() {
-  // const [img, setImage] = useState("/../public/menu.png");
+  const [img, setImage] = useState("/../public/menu.png");
 
   // const onScroll = () => {
   //   window.addEventListener("scroll", () => {
@@ -24,14 +24,16 @@ export default function Home() {
   //   });
   // };
 
-  // const toggleNav = () => {
-  //   document.body.classList.toggle("show-nav");
-  //   if (document.body.classList.contains("show-nav")) {
-  //     setImage("/../public/close.png");
-  //   } else {
-  //     setImage("/../public/menu.png");
-  //   }
-  // };
+  const toggleNav = () => {
+    const toggle = document.getElementById("toggle");
+    document.body.classList.toggle("show-nav");
+    toggle.classList.toggle("move-tog");
+    if (document.body.classList.contains("show-nav")) {
+      setImage("/../public/close.png");
+    } else {
+      setImage("/../public/menu.png");
+    }
+  };
 
   return (
     <>
@@ -43,14 +45,14 @@ export default function Home() {
       {/* NavBar as Sidebar */}
       <Nav />
       <div className="container">
-        {/* <button
+        <button
           className="toggle"
           id="toggle"
           onClick={toggleNav}
-          onScroll={onScroll}
+          // onScroll={onScroll}
         >
           <Image alt="nav-icon" src={img} width="30px" height="30px" />
-        </button> */}
+        </button>
         {/* Hero section */}
         <Header />
         <main className="main-container">

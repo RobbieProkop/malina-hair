@@ -25,35 +25,35 @@ const Nav = () => {
     }
   };
   return (
-    <div className={navContainer}>
-      <nav className={nav}>
-        <div className={logo}>
-          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" />
-        </div>
-        <ul>
-          <li data-text="About">
-            <Link href="#about">About</Link>
-          </li>
-          <li data-text="Examples">
-            <Link href="#work">Examples</Link>
-          </li>
-          <li data-text="Favourite Products">
-            <Link href="#favourites">Favourite Products</Link>
-          </li>
-          <li data-text="Contact">
-            <Link href="#contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-      <button
-        className="toggle"
-        id="toggle"
-        onClick={toggleNav}
-        onScroll={onScroll}
-      >
-        <Image alt="nav-icon" src={img} width="30px" height="30px" />
-      </button>
-    </div>
+    // <div className={navContainer}>
+    <nav className={nav}>
+      <div className={logo}>
+        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="" />
+      </div>
+      <ul>
+        <li data-text="About">
+          <Link href="#about">About</Link>
+        </li>
+        <li data-text="Examples">
+          <Link href="#work">Examples</Link>
+        </li>
+        <li data-text="Favourite Products">
+          <Link href="#favourites">Favourite Products</Link>
+        </li>
+        <li data-text="Contact">
+          <Link href="#contact">Contact</Link>
+        </li>
+      </ul>
+    </nav>
+    //   <button
+    //     className="toggle"
+    //     id="toggle"
+    //     onClick={toggleNav}
+    //     onScroll={onScroll}
+    //   >
+    //     <Image alt="nav-icon" src={img} width="30px" height="30px" />
+    //   </button>
+    // </div>
   );
 };
 export default Nav;
