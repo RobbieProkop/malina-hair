@@ -8,6 +8,7 @@ const Modal = () => {
       e.target.parentElement.id === "close"
     )
       document.getElementById("modal").style.display = "none";
+    document.body.style.setProperty("overflow", "unset");
   };
 
   return (

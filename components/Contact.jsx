@@ -9,6 +9,7 @@ const Contact = () => {
     e.preventDefault();
 
     document.getElementById("modal").style.display = "block";
+    document.body.style.setProperty("overflow", "hidden");
   };
   return (
     <section id="contact">

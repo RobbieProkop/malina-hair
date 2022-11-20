@@ -6,6 +6,7 @@ const Header = () => {
     e.preventDefault();
 
     document.getElementById("modal").style.display = "block";
+    document.body.style.setProperty("overflow", "hidden");
   };
 
   const [img, setImage] = useState("/../public/menu.png");
