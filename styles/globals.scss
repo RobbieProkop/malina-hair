@@ -18,6 +18,9 @@ body {
     transform: translateX(200px);
     overflow-x: hidden;
   }
+  #__next {
+    display: flex;
+  }
 }
 
 a {
@@ -60,7 +63,7 @@ input[type="submit"] {
   align-items: center;
 }
 .container {
-  margin-top: -100vh;
+  // margin-top: -100vh;
 
   .toggle {
     position: sticky;
