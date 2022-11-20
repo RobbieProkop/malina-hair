@@ -35,7 +35,7 @@ export default function Home() {
       <Nav />
       <div className="container">
         <button className="toggle" id="toggle" onClick={toggleNav}>
-          <Image src={img} width="30px" height="30px" />
+          <Image alt="nav-icon" src={img} width="30px" height="30px" />
         </button>
         {/* Hero section */}
         <Header />
