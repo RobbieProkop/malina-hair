@@ -63,23 +63,22 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
 }
+.toggle {
+  position: absolute;
+  align-self: flex-start;
+  background-color: $blur;
+  top: 20px;
+  left: 20px;
+  transition: transform 0.5s;
+  z-index: 100;
+
+  &:hover {
+    transform: rotate(10deg);
+  }
+}
 .container {
   transform: translateX(-200px);
   position: relative;
-
-  .toggle {
-    position: absolute;
-    align-self: flex-start;
-    background-color: $blur;
-    top: 20px;
-    left: 20px;
-    transition: transform 0.5s;
-    z-index: 100;
-
-    &:hover {
-      transform: rotate(10deg);
-    }
-  }
 }
 
 //header
