@@ -8,17 +8,61 @@ const Work = () => {
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
+  const [width, setWidth] = useState(0);
+
+  // setWidth(screenWidth);
 
   const movePrev = () => {
+    // let screenWidth = window.innerWidth;
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide
-      ? data.resources.length - 3
-      : currentIndex - 1;
+    const resourceLength = data.resources.length;
+
+    // if (!isFirstSlide) {
+    //   console.log("not first!");
+    //   return setCurrentIndex(currentIndex - 1);
+    // }
+    // console.log("first!!!");
+    // if (screenWidth >= 1350) {
+    //   const newIndex = resourceLength - 3;
+    //   setCurrentIndex(newIndex);
+    // } else if (screenWidth >= 1040) {
+    //   const newIndex = resourceLength - 2;
+    //   setCurrentIndex(newIndex);
+    // } else {
+    //   const newIndex = resourceLength - 1;
+    //   setCurrentIndex(newIndex);
+    // }
+    const newIndex = isFirstSlide ? resourceLength - 3 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const moveNext = () => {
-    // -4 should change depending on how many items are in the data.resources array
+    // -3 should change depending on how many items are in the data.resources array
+    // let screenWidth = window.innerWidth;
+    // const resourceLength = data.resources.length;
+
+    // // let isLastSlide = currentIndex === resourceLength - 1;
+    // // console.log("isLastSlide", isLastSlide);
+    // // if (!isLastSlide) {
+    // //   return setCurrentIndex(currentIndex + 1);
+    // // }
+
+    // if (screenWidth >= 1350) {
+    //   let isLastSlide = currentIndex === resourceLength - 3;
+    //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    //   setCurrentIndex(newIndex);
+    // } else if (screenWidth >= 1040) {
+    //   let isLastSlide = currentIndex === resourceLength - 2;
+    //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    //   setCurrentIndex(newIndex);
+    // } else {
+    //   let isLastSlide = currentIndex === resourceLength - 1;
+    //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    //   setCurrentIndex(newIndex);
+    // }
+    // // const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    // // setCurrentIndex(newIndex);
+
     const isLastSlide = currentIndex === data.resources.length - 3;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
