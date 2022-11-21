@@ -14,18 +14,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: black;
-  // overflow-x: hidden;
 
   &.show-nav {
-    .Nav_nav__bbBcN,
-    .toggle {
+    .Nav_nav__bbBcN {
       transform: translateX(0px);
-      position: sticky;
     }
   }
-  // #__next {
-  //   display: flex;
-  // }
 }
 
 a {
@@ -91,23 +85,14 @@ input[type="submit"] {
       }
     }
   }
-
-  // &:hover {
-  //   // transform: translateX(-200px) rotate(10deg);
-  // }
 }
-// .container {
-//   // transform: translateX(-310px);
-//   transform: translateY(-100vh);
-// }
 
 //header
 header {
-  // background-color: $primary-color;
   background: url("../public/hero-hair.jpeg") no-repeat center/cover;
   color: $white;
   font-size: 130%;
-  // position: relative;
+
   padding: 0 40px 15px;
   text-align: center;
   display: flex;
@@ -215,8 +200,6 @@ header {
     grid-template-columns: 1fr 3fr;
     margin: 3rem 0;
     min-height: 50vh;
-    // border-bottom: 2px solid $white;
-    // padding-bottom: 3rem;
 
     .heading {
       display: flex;
@@ -284,9 +267,7 @@ header {
           aspect-ratio: 1/1;
         }
         h3 {
-          // position: relative;
           padding-top: -1rem;
-          // padding-bottom: 2rem;
         }
       }
     }
