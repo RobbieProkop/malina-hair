@@ -108,6 +108,7 @@ const Work = () => {
               key={index}
               href={resource.link}
               target="_blank"
+              rel="noreferrer"
             >
               <div className="image-container">
                 <Image
