@@ -153,6 +153,7 @@ const Work = () => {
               href={resource.link}
               target="_blank"
               rel="noreferrer"
+              draggable
             >
               <div className="image-container">
                 <Image
