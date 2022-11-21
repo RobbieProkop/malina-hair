@@ -15,8 +15,6 @@ const Favourites = () => {
       ? data.resources.length - 3
       : currentIndex - 1;
     setCurrentIndex(newIndex);
-    console.log("currentIndex", currentIndex);
-    console.log("newIndex :>> ", newIndex);
   };
 
   const movePrev = () => {
@@ -27,8 +25,6 @@ const Favourites = () => {
   };
 
   useEffect(() => {
-    console.log("currentIndex", currentIndex);
-
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - carousel.current.offsetWidth
       : 7;
