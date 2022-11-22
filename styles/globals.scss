@@ -14,18 +14,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: black;
-  // overflow-x: hidden;
 
   &.show-nav {
-    .Nav_nav__bbBcN,
-    .toggle {
+    .Nav_nav__bbBcN {
       transform: translateX(0px);
-      position: sticky;
     }
   }
-  // #__next {
-  //   display: flex;
-  // }
 }
 
 a {
@@ -91,23 +85,14 @@ input[type="submit"] {
       }
     }
   }
-
-  // &:hover {
-  //   // transform: translateX(-200px) rotate(10deg);
-  // }
 }
-// .container {
-//   // transform: translateX(-310px);
-//   transform: translateY(-100vh);
-// }
 
 //header
 header {
-  // background-color: $primary-color;
   background: url("../public/hero-hair.jpeg") no-repeat center/cover;
   color: $white;
   font-size: 130%;
-  // position: relative;
+
   padding: 0 40px 15px;
   text-align: center;
   display: flex;
@@ -137,6 +122,7 @@ header {
 
   h2 {
     margin: 5px 0 10px 0;
+    text-align: center;
   }
 
   // About
@@ -209,14 +195,90 @@ header {
     }
   }
 
+  //Work with Image Slider
+  .workSlider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .slideStyles {
+      width: 100%;
+      height: 55vh;
+      margin: 0 auto 4rem;
+      position: relative;
+
+      a {
+        transition: opacity 0.4s ease-in-out;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .image-btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 3rem;
+
+        font-size: 3rem;
+        color: $white;
+        border-radius: 10px;
+        z-index: 1;
+        transition: color 0.3s;
+
+        cursor: pointer;
+        &:hover {
+          color: $secondary-color;
+        }
+
+        &.btn-left {
+          left: 2rem;
+        }
+
+        &.btn-right {
+          right: 2rem;
+        }
+      }
+
+      .dots-container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+
+        top: 105%;
+
+        .dot {
+          margin: 0 3px;
+          cursor: pointer;
+          font-size: 20px;
+          color: $white;
+
+          &:hover {
+            color: $secondary-color;
+          }
+
+          &.current-dot {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
   // Work Carousel Section
   .carouselStyle {
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin: 3rem 0;
     min-height: 50vh;
-    // border-bottom: 2px solid $white;
-    // padding-bottom: 3rem;
 
     .heading {
       display: flex;
@@ -284,9 +346,7 @@ header {
           aspect-ratio: 1/1;
         }
         h3 {
-          // position: relative;
           padding-top: -1rem;
-          // padding-bottom: 2rem;
         }
       }
     }
@@ -462,6 +522,7 @@ header {
   }
 }
 
+@import "../styles/mobile";
 // @media (prefers-color-scheme: dark) {
 //   html {
 //     color-scheme: dark;
