@@ -50,6 +50,7 @@ const ImageSlider = ({ slides }) => {
           <div
             key={slideIndex}
             className="dot"
+            selected
             onClick={() => gotToSlide(slideIndex)}
           >
             ●
