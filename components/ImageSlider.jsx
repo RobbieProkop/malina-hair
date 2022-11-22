@@ -16,6 +16,10 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(newIndex);
   };
 
+  const gotToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
   // setTimeout(() => {
   //   moveNext();
   // }, 3000);
@@ -43,7 +47,11 @@ const ImageSlider = ({ slides }) => {
       {/* dots underneath */}
       <div className="dots-container">
         {slides.map((slide, slideIndex) => (
-          <div key={slideIndex} className="dot">
+          <div
+            key={slideIndex}
+            className="dot"
+            onClick={() => gotToSlide(slideIndex)}
+          >
             ●
           </div>
         ))}
