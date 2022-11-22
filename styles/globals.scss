@@ -194,6 +194,23 @@ header {
     }
   }
 
+  //Work with Image Slider
+  .workSlider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .slideStyles {
+      width: 55vw;
+      height: 55vh;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
   // Work Carousel Section
   .carouselStyle {
     display: grid;

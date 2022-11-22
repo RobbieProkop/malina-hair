@@ -168,12 +168,8 @@ const Work = () => {
     // </section>
 
     // using imageSLider component
-    <section id="work" className="carouselStyle">
-      <div className="heading">
-        <div className="heading-container">
-          <h2>Check Out My Work</h2>
-        </div>
-      </div>
+    <section id="work" className="workSlider">
+      <h2>Check Out My Work</h2>
 
       <ImageSlider slides={data.resources} />
     </section>
