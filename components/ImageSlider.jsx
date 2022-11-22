@@ -16,9 +16,9 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(newIndex);
   };
 
-  setTimeout(() => {
-    moveNext();
-  }, 3000);
+  // setTimeout(() => {
+  //   moveNext();
+  // }, 3000);
 
   return (
     <div className="slideStyles">
@@ -31,7 +31,7 @@ const ImageSlider = ({ slides }) => {
       </div>
 
       {/* image */}
-      <a href={slides[currentIndex].link}>
+      <a href={slides[currentIndex].link} target="_blank" rel="noreferrer">
         <Image
           alt="workImage"
           src={slides[currentIndex].imageUrl}
@@ -39,6 +39,15 @@ const ImageSlider = ({ slides }) => {
           objectFit="contain"
         />
       </a>
+
+      {/* dots underneath */}
+      <div className="dots-container">
+        {slides.map((slide, slideIndex) => (
+          <div key={slideIndex} className="dot">
+            ●
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
