@@ -6,6 +6,11 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <div className="slideStyles">
+      {/* buttons */}
+      <div className="image-btn btn-left">❰</div>
+      <div className="image-btn btn-right">❱</div>
+
+      {/* image */}
       <a href={slides[currentIndex].link}>
         <Image
           alt="workImage"

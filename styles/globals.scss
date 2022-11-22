@@ -209,6 +209,24 @@ header {
       height: 55vh;
       margin: 0 auto;
       position: relative;
+
+      .image-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        color: $white;
+        z-index: 1;
+        cursor: pointer;
+
+        &.btn-left {
+          left: 2rem;
+        }
+
+        &.btn-right {
+          right: 2rem;
+        }
+      }
     }
   }
   // Work Carousel Section
