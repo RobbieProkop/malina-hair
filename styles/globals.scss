@@ -258,6 +258,10 @@ header {
           &:hover {
             color: $secondary-color;
           }
+
+          &.current-dot {
+            color: $secondary-color;
+          }
         }
       }
     }

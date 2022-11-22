@@ -46,16 +46,25 @@ const ImageSlider = ({ slides }) => {
 
       {/* dots underneath */}
       <div className="dots-container">
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            className="dot"
-            selected
-            onClick={() => gotToSlide(slideIndex)}
-          >
-            ●
-          </div>
-        ))}
+        {slides.map((slide, slideIndex) =>
+          slideIndex === currentIndex ? (
+            <div
+              key={slideIndex}
+              className="dot current-dot"
+              onClick={() => gotToSlide(slideIndex)}
+            >
+              ●
+            </div>
+          ) : (
+            <div
+              key={slideIndex}
+              className="dot"
+              onClick={() => gotToSlide(slideIndex)}
+            >
+              ●
+            </div>
+          )
+        )}
       </div>
     </div>
   );
