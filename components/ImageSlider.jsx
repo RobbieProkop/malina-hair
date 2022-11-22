@@ -4,6 +4,8 @@ import { useState } from "react";
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [selected, setSelected] = useState(false);
+
   const movePrev = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -19,10 +21,12 @@ const ImageSlider = ({ slides }) => {
   const gotToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
-
-  // setTimeout(() => {
+  // const slideChange = setTimeout(() => {
   //   moveNext();
   // }, 3000);
+
+  // clearTimeout(slideChange);
+  // console.log(slideChange);
 
   return (
     <div className="slideStyles">
