@@ -60,3 +60,60 @@
     }
   }
 }
+
+@media screen and (max-width: 720px) {
+  .main-container {
+    .about {
+      p {
+        &::before {
+          height: 110%;
+          top: -6%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 605px) {
+  header {
+    div {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        margin: 1rem;
+      }
+      .cta-btn {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+
+  .main-container {
+    .about {
+      h2 {
+        margin-right: 0;
+      }
+    }
+    .flex-icons {
+      flex-direction: column;
+      padding: 2.5rem 0;
+    }
+
+    .flex-center {
+      flex-direction: column;
+      font-size: 1.5rem;
+      gap: 0;
+
+      &.column {
+        .cta-btn {
+          padding: 1rem 2rem;
+        }
+
+        h3 {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
