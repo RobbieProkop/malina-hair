@@ -180,4 +180,28 @@
       }
     }
   }
+
+  .main-container {
+    h2 {
+      font-size: 2rem;
+    }
+    .about {
+      padding: 0;
+      text-align: center;
+      p {
+        &::before {
+          transform: rotate(0deg);
+          width: 100%;
+        }
+      }
+    }
+
+    .flex-center {
+      a {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 }
