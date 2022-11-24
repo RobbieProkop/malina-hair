@@ -1,5 +1,6 @@
 import Image from "next/image";
 import insta from "../public/icons/instagram-white.png";
+// import insta from "../public/icons/instagram-logo.png";
 
 const MoreInfo = () => {
   return (

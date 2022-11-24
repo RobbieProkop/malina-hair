@@ -1,5 +1,6 @@
 import Image from "next/image";
 import insta from "../public/icons/instagram-white.png";
+// import insta from "../public/icons/instagram-logo.png";
 import fb from "../public/icons/facebook.png";
 import phone from "../public/icons/telephone.png";
 import email from "../public/icons/email.png";
