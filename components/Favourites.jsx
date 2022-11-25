@@ -8,23 +8,52 @@ const Favourites = () => {
   const maxScrollWidth = useRef(7);
   const [currentIndex, setCurrentIndex] = useState(7);
   const carousel = useRef(null);
+  const [mobile, setMobile] = useState(false);
 
+  const handleWindowSizeChange = () => {
+    window.innerWidth < 966 ? setMobile(true) : setMobile(false);
+  };
+  console.log(mobile);
   const moveNext = () => {
     const isFirstSlide = currentIndex === 0;
+    if (mobile) {
+      const newIndex = isFirstSlide
+        ? data.resources.length - 1
+        : currentIndex - 1;
+      setCurrentIndex(newIndex);
+      console.log("newIndex", newIndex);
+      console.log(
+        "object :>> ",
+        carousel.current.scrollWidth - carousel.current.offsetWidth
+      );
+      return;
+    }
+
     const newIndex = isFirstSlide
       ? data.resources.length - 3
       : currentIndex - 1;
     setCurrentIndex(newIndex);
+
+    console.log("newIndex Next", newIndex);
   };
 
   const movePrev = () => {
     // -4 should change depending on how many items are in the data.resources array
+
+    if (mobile) {
+      const isLastSlide = currentIndex === data.resources.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+      return;
+    }
     const isLastSlide = currentIndex === data.resources.length - 3;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+    console.log("newIndex Prev", newIndex);
   };
 
   useEffect(() => {
+    handleWindowSizeChange();
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - carousel.current.offsetWidth
       : 7;
@@ -32,11 +61,20 @@ const Favourites = () => {
 
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
-      // each card is 256px, so we want to scroll 256px each click
+      // each card is 260px, so we want to scroll 260px each click
 
+      // if (currentIndex === data.resources.length) {
+      //   carousel.current.scrollLeft = 100 * 9;
+      // } else {
       carousel.current.scrollLeft =
-        246 * (currentIndex !== 0 ? currentIndex : -1);
+        260 * (currentIndex !== 0 ? currentIndex : -1);
     }
+    window.innerWidth;
+    window.addEventListener("resize", handleWindowSizeChange);
+    console.log("again", mobile);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
   }, [currentIndex]);
 
   return (
@@ -49,6 +87,7 @@ const Favourites = () => {
               key={index}
               href={resource.link}
               target="_blank"
+              rel="noreferrer"
             >
               <div className="image-container">
                 <Image
