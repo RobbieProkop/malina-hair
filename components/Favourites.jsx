@@ -8,15 +8,20 @@ const Favourites = () => {
   const maxScrollWidth = useRef(7);
   const [currentIndex, setCurrentIndex] = useState(7);
   const carousel = useRef(null);
-  const [mobile, setMobile] = useState(false);
+  const [isMobile, setMobile] = useState(false);
+  const [isTablet, setTablet] = useState(false);
 
   const handleWindowSizeChange = () => {
+    switch (width) {
+      case 900:
+    }
+
     window.innerWidth < 966 ? setMobile(true) : setMobile(false);
   };
-  console.log(mobile);
+  console.log(isMobile);
   const moveNext = () => {
     const isFirstSlide = currentIndex === 0;
-    if (mobile) {
+    if (isMobile) {
       const newIndex = isFirstSlide
         ? data.resources.length - 1
         : currentIndex - 1;
@@ -40,7 +45,7 @@ const Favourites = () => {
   const movePrev = () => {
     // -4 should change depending on how many items are in the data.resources array
 
-    if (mobile) {
+    if (isMobile) {
       const isLastSlide = currentIndex === data.resources.length - 1;
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
@@ -71,7 +76,7 @@ const Favourites = () => {
     }
     window.innerWidth;
     window.addEventListener("resize", handleWindowSizeChange);
-    console.log("again", mobile);
+    console.log("again", isMobile);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
