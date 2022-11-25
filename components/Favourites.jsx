@@ -15,21 +15,17 @@ const Favourites = () => {
     if (window.innerWidth <= 900 && window.innerWidth > 550) {
       setTablet(true);
       setMobile(false);
-      console.log("Tablet time");
       return;
     }
 
     if (window.innerWidth <= 550) {
       setTablet(false);
       setMobile(true);
-      console.log("mobile Time");
       return;
     }
     setMobile(false);
     setTablet(false);
-    console.log("Desktop time");
   };
-  console.log(isMobile);
   const moveNext = () => {
     const isFirstSlide = currentIndex === 0;
     let device;
