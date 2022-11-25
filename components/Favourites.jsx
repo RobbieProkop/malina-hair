@@ -12,30 +12,52 @@ const Favourites = () => {
   const [isTablet, setTablet] = useState(false);
 
   const handleWindowSizeChange = () => {
-    switch (width) {
-      case 900:
+    if (window.innerWidth <= 900 && window.innerWidth > 550) {
+      setTablet(true);
+      setMobile(false);
+      console.log("Tablet time");
+      return;
     }
 
-    window.innerWidth < 966 ? setMobile(true) : setMobile(false);
+    if (window.innerWidth <= 550) {
+      setTablet(false);
+      setMobile(true);
+      console.log("mobile Time");
+      return;
+    }
+    setMobile(false);
+    setTablet(false);
+    console.log("Desktop time");
+
+    // window.innerWidth < 966 ? setMobile(true) : setMobile(false);
   };
   console.log(isMobile);
   const moveNext = () => {
     const isFirstSlide = currentIndex === 0;
-    if (isMobile) {
-      const newIndex = isFirstSlide
-        ? data.resources.length - 1
-        : currentIndex - 1;
-      setCurrentIndex(newIndex);
-      console.log("newIndex", newIndex);
-      console.log(
-        "object :>> ",
-        carousel.current.scrollWidth - carousel.current.offsetWidth
-      );
-      return;
-    }
+    let device;
+
+    // if (isMobile) {
+    //   const newIndex = isFirstSlide
+    //     ? data.resources.length - 1
+    //     : currentIndex - 1;
+    //   setCurrentIndex(newIndex);
+    //   return;
+    // }
+    // if (isTablet) {
+    //   const newIndex = isFirstSlide
+    //     ? data.resources.length - 2
+    //     : currentIndex - 1;
+    //   setCurrentIndex(newIndex);
+    //   return;
+    // }
+
+    if (isMobile) device = 1;
+    if (isTablet) device = 2;
+    if (!isMobile && !isTablet) device = 3;
+    console.log("device", device);
 
     const newIndex = isFirstSlide
-      ? data.resources.length - 3
+      ? data.resources.length - device
       : currentIndex - 1;
     setCurrentIndex(newIndex);
 
@@ -45,14 +67,23 @@ const Favourites = () => {
   const movePrev = () => {
     // -4 should change depending on how many items are in the data.resources array
 
-    if (isMobile) {
-      const isLastSlide = currentIndex === data.resources.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-      return;
-    }
-    const isLastSlide = currentIndex === data.resources.length - 3;
+    // if (isMobile) {
+    //   const isLastSlide = currentIndex === data.resources.length - 1;
+    //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    //   setCurrentIndex(newIndex);
+    //   return;
+    // }
+    let device;
+
+    if (isMobile) device = 1;
+    if (isTablet) device = 2;
+    if (!isMobile && !isTablet) device = 3;
+    console.log("device", device);
+
+    const isLastSlide = currentIndex === data.resources.length - device;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    // setCurrentIndex(newIndex);
+    // const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
     console.log("newIndex Prev", newIndex);
   };
