@@ -28,64 +28,33 @@ const Favourites = () => {
     setMobile(false);
     setTablet(false);
     console.log("Desktop time");
-
-    // window.innerWidth < 966 ? setMobile(true) : setMobile(false);
   };
   console.log(isMobile);
   const moveNext = () => {
     const isFirstSlide = currentIndex === 0;
     let device;
 
-    // if (isMobile) {
-    //   const newIndex = isFirstSlide
-    //     ? data.resources.length - 1
-    //     : currentIndex - 1;
-    //   setCurrentIndex(newIndex);
-    //   return;
-    // }
-    // if (isTablet) {
-    //   const newIndex = isFirstSlide
-    //     ? data.resources.length - 2
-    //     : currentIndex - 1;
-    //   setCurrentIndex(newIndex);
-    //   return;
-    // }
-
     if (isMobile) device = 1;
     if (isTablet) device = 2;
     if (!isMobile && !isTablet) device = 3;
-    console.log("device", device);
 
     const newIndex = isFirstSlide
       ? data.resources.length - device
       : currentIndex - 1;
     setCurrentIndex(newIndex);
-
-    console.log("newIndex Next", newIndex);
   };
 
   const movePrev = () => {
-    // -4 should change depending on how many items are in the data.resources array
-
-    // if (isMobile) {
-    //   const isLastSlide = currentIndex === data.resources.length - 1;
-    //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    //   setCurrentIndex(newIndex);
-    //   return;
-    // }
+    //device number should change depending on how many items are in the data.resources array
     let device;
 
     if (isMobile) device = 1;
     if (isTablet) device = 2;
     if (!isMobile && !isTablet) device = 3;
-    console.log("device", device);
 
     const isLastSlide = currentIndex === data.resources.length - device;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    // setCurrentIndex(newIndex);
-    // const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-    console.log("newIndex Prev", newIndex);
   };
 
   useEffect(() => {
