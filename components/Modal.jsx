@@ -23,7 +23,7 @@ const Modal = () => {
         <div className="modal-content">
           <p>How can I help you? Send me a message!</p>
 
-          <form className="modal-form">
+          <form className="modal-form" method="POST" data-netlify="true">
             <div>
               <label htmlFor="name">Name</label>
               <input
