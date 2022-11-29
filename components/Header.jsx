@@ -9,23 +9,8 @@ const Header = () => {
     document.body.style.setProperty("overflow", "hidden");
   };
 
-  const [img, setImage] = useState("/../public/menu.png");
-
-  const toggleNav = () => {
-    document.body.classList.toggle("show-nav");
-    if (document.body.classList.contains("show-nav")) {
-      setImage("/../public/close.png");
-    } else {
-      setImage("/../public/menu.png");
-    }
-  };
-
   return (
     <header id="header">
-      {/* <button className="toggle" id="toggle" onClick={toggleNav}>
-        <Image src={img} width="30px" height="30px" />
-      </button> */}
-
       <div>
         <h1>Creative Hair Styling</h1>
         <p>

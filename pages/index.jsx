@@ -12,18 +12,20 @@ import Image from "next/image";
 import MoreInfo from "../components/MoreInfo";
 import Favourites from "../components/Favourites";
 import Contact from "../components/Contact";
+import menu from "../public/menu.png";
+import close from "../public/close.png";
 
 export default function Home() {
-  const [img, setImage] = useState("/../public/menu.png");
+  const [img, setImage] = useState(menu);
 
   const toggleNav = () => {
     const toggle = document.getElementById("toggle");
     document.body.classList.toggle("show-nav");
     toggle.classList.toggle("move-tog");
     if (document.body.classList.contains("show-nav")) {
-      setImage("/../public/close.png");
+      setImage(close);
     } else {
-      setImage("/../public/menu.png");
+      setImage(menu);
     }
   };
 
