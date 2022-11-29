@@ -63,6 +63,7 @@ input[type="submit"] {
 }
 .container {
   margin-top: -106vh;
+  position: relative;
 
   .toggle {
     position: sticky;
@@ -88,16 +89,26 @@ input[type="submit"] {
 }
 
 //header
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55vh;
+  z-index: 0;
+}
 header {
-  background: url("../public/hero-hair.jpeg") no-repeat center/cover;
+  // background: url("../public/hero-hair.jpeg") no-repeat center/cover;
+  position: absolute;
   color: $white;
   font-size: 130%;
-
   padding: 0 40px 15px;
   text-align: center;
   display: flex;
   align-items: center;
   height: 55vh;
+  z-index: 1;
 
   div {
     width: 95vw;
@@ -115,7 +126,7 @@ header {
 // Main Section
 .main-container {
   padding: 15px;
-  margin: 0 auto;
+  margin: 55vh auto 0;
   max-width: 100%;
   width: 1200px;
   min-height: 80vh;
