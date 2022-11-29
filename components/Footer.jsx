@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { footer } from "../styles/Footer.module.scss";
 
 const Footer = () => {
@@ -5,9 +6,9 @@ const Footer = () => {
     <div>
       <p className={footer}>
         Creative Hair Styling &copy; 2023 | Site by{" "}
-        <a href="https://dhammadevs.com" target="_blank">
-          DhammaDevs
-        </a>
+        <Link href="https://dhammadevs.com">
+          <a target="_blank">DhammaDevs</a>
+        </Link>
       </p>
     </div>
   );

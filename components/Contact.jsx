@@ -4,6 +4,7 @@ import insta from "../public/icons/instagram-white.png";
 import fb from "../public/icons/facebook.png";
 import phone from "../public/icons/telephone.png";
 import email from "../public/icons/email.png";
+import Link from "next/link";
 
 const Contact = () => {
   const openModal = (e) => {
@@ -21,36 +22,41 @@ const Contact = () => {
         </button>
         <h3>Contact me </h3>
         {/* instagram */}
-        <a
-          href="https://www.instagram.com/creative.hair.styling/ "
-          target="_blank"
-        >
-          <span>
-            <Image src={insta} width={48} height={48} />
-          </span>
-          <h4>@creative.hair.stylist</h4>
-        </a>{" "}
+        <Link href="https://www.instagram.com/creative.hair.styling/ ">
+          <a target="_blank">
+            <span>
+              <Image src={insta} width={48} height={48} />
+            </span>
+            <h4>@creative.hair.stylist</h4>
+          </a>
+        </Link>{" "}
         {/* facebook */}
-        <a href="#" target="_blank">
-          <span>
-            <Image src={fb} width={48} height={48} />
-          </span>
-          <h4>creative hairstyling</h4>
-        </a>{" "}
+        <Link href="#">
+          <a target="_blank">
+            <span>
+              <Image src={fb} width={48} height={48} />
+            </span>
+            <h4>creative hairstyling</h4>
+          </a>
+        </Link>{" "}
         {/* telephone */}
-        <a href="#" target="_blank">
-          <span>
-            <Image src={phone} width={48} height={48} />
-          </span>
-          <h4>(403) 467-4464</h4>
-        </a>{" "}
+        <Link href="#">
+          <a target="_blank">
+            <span>
+              <Image src={phone} width={48} height={48} />
+            </span>
+            <h4>(403) 467-4464</h4>
+          </a>
+        </Link>{" "}
         {/* email */}
-        <a href="mailto:malina@creativehairstyling.co" target="_blank">
-          <span>
-            <Image src={email} width={48} height={48} />
-          </span>
-          <h4>malina@creativehairstyling.co</h4>
-        </a>{" "}
+        <Link href="mailto:malina@creativehairstyling.co">
+          <a target="_blank">
+            <span>
+              <Image src={email} width={48} height={48} />
+            </span>
+            <h4>malina@creativehairstyling.co</h4>
+          </a>
+        </Link>{" "}
       </div>
     </section>
   );
