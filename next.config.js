@@ -11,6 +11,7 @@ const nextConfig = {
     domains: [
       "instagram.ftbs5-3.fna.fbcdn.net",
       "instagram.ftbs5-2.fna.fbcdn.net",
+      "scontent-ams4-1.cdninstagram.com",
     ],
   },
 };
