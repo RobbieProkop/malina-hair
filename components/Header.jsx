@@ -31,6 +31,7 @@ const Header = () => {
           objectFit="cover"
           objectPosition="center"
           alt="headerBG"
+          priority
         ></Image>
       </div>
     </>
