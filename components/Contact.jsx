@@ -25,16 +25,16 @@ const Contact = () => {
         <Link href="https://www.instagram.com/creative.hair.styling/ ">
           <a target="_blank">
             <span>
-              <Image src={insta} width={48} height={48} />
+              <Image src={insta} width={48} height={48} alt="insta" />
             </span>
             <h4>@creative.hair.stylist</h4>
           </a>
         </Link>{" "}
         {/* facebook */}
-        <Link href="#">
+        <Link href="https://www.facebook.com/Creative.Hairstyling.YYC">
           <a target="_blank">
             <span>
-              <Image src={fb} width={48} height={48} />
+              <Image src={fb} width={48} height={48} alt="facebook" />
             </span>
             <h4>creative hairstyling</h4>
           </a>
@@ -43,7 +43,7 @@ const Contact = () => {
         <Link href="#">
           <a target="_blank">
             <span>
-              <Image src={phone} width={48} height={48} />
+              <Image src={phone} width={48} height={48} alt="phone" />
             </span>
             <h4>(403) 467-4464</h4>
           </a>
@@ -52,7 +52,7 @@ const Contact = () => {
         <Link href="mailto:malina@creativehairstyling.co">
           <a target="_blank">
             <span>
-              <Image src={email} width={48} height={48} />
+              <Image src={email} width={48} height={48} alt="email" />
             </span>
             <h4>malina@creativehairstyling.co</h4>
           </a>

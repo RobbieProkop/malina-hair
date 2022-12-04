@@ -12,7 +12,7 @@ const MoreInfo = () => {
           <a target="_blank">
             <h2>@creative.hair.styling</h2>
             <span>
-              <Image src={insta} width={48} height={48} />
+              <Image src={insta} width={48} height={48} alt="insta" />
             </span>
           </a>
         </Link>
