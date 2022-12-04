@@ -9,13 +9,7 @@ const Nav = () => {
     // <div className={navContainer}>
     <nav className={nav}>
       <div className={logo}>
-        <Image
-          // src="https://randomuser.me/api/portraits/women/12.jpg"
-          src={logoImg}
-          alt="user"
-          height="100px"
-          width="100px"
-        />
+        <Image src={logoImg} alt="user" height="100px" width="100px" />
       </div>
       <ul>
         <li data-text="About">
