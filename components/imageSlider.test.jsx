@@ -10,6 +10,8 @@ describe("image slider component", () => {
   });
   it("should find the left btn", () => {
     render(<ImageSlider slides={data.resources} />);
-    expect(screen.getByTestId("test-btn-left")).toBeInTheDocument;
+    screen.getByTestId("test-btn-left").click;
+    const next = moveNext;
+    console.log();
   });
 });
