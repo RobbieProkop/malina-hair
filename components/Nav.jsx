@@ -13,8 +13,8 @@ const Nav = () => {
           // src="https://randomuser.me/api/portraits/women/12.jpg"
           src={logoImg}
           alt="user"
-          layout="fill"
-          objectFit="contain"
+          height="100px"
+          width="100px"
         />
       </div>
       <ul>
