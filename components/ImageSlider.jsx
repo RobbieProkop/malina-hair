@@ -23,7 +23,11 @@ const ImageSlider = ({ slides }) => {
   return (
     <div className="slideStyles">
       {/* buttons */}
-      <div className="image-btn btn-left" onClick={movePrev}>
+      <div
+        className="image-btn btn-left"
+        data-testid="test-btn-left"
+        onClick={movePrev}
+      >
         ❰
       </div>
       <div className="image-btn btn-right" onClick={moveNext}>

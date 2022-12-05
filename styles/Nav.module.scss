@@ -1,21 +1,12 @@
 @import "./variables";
 
-// .navContainer {
-//   display: flex;
-//   // align-items: flex-start;
-//   justify-content: space-between;
-//   min-width: 310px;
-//   z-index: 100;
-// }
-
 .nav {
   background-color: $primary-color;
   border-right: 2px solid $greyTransparent;
   color: $text-color;
   position: sticky;
   top: 0;
-  // left: 0;
-  // min-width: 200px;
+
   width: 200px;
   height: 100vh;
   z-index: 100;
@@ -26,8 +17,6 @@
     text-align: center;
 
     img {
-      height: 100px;
-      width: 100px;
       border-radius: 50%;
     }
   }
@@ -43,7 +32,6 @@
       a {
         transition: color 0.5s ease-in-out;
         color: $text-color;
-        // font-weight: 500;
         font-size: 1.5rem;
         &:hover {
           color: $secondary-color;

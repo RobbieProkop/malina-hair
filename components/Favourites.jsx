@@ -72,7 +72,7 @@ const Favourites = () => {
     }
     window.innerWidth;
     window.addEventListener("resize", handleWindowSizeChange);
-    console.log("again", isMobile);
+
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
