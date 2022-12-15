@@ -126,7 +126,7 @@ const Favourites = () => {
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
-              <span className="sr-only">Next</span>
+              <span className="sr-only">Prev</span>
             </button>
             <button onClick={movePrev} className="next-btn">
               <svg
@@ -143,7 +143,7 @@ const Favourites = () => {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-              <span className="sr-only">Prev</span>
+              <span className="sr-only">Next</span>
             </button>
           </div>
         </div>
