@@ -40,14 +40,12 @@ const Contact = () => {
           </a>
         </Link>{" "}
         {/* telephone */}
-        <Link href="#">
-          <a target="_blank">
-            <span>
-              <Image src={phone} width={48} height={48} alt="phone" />
-            </span>
-            <h4>(403) 467-4464</h4>
-          </a>
-        </Link>{" "}
+        <a>
+          <span>
+            <Image src={phone} width={48} height={48} alt="phone" />
+          </span>
+          <h4>(403) 467-4464</h4>
+        </a>
         {/* email */}
         <Link href="mailto:malina@creativehairstyling.co">
           <a target="_blank">
