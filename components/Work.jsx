@@ -1,8 +1,4 @@
-import Image from "next/image";
-
 import data from "../pages/api/workData.json";
-
-import { useState, useRef, useEffect } from "react";
 import ImageSlider from "./ImageSlider";
 
 const Work = () => {
