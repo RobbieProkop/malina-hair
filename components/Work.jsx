@@ -1,7 +1,75 @@
-import data from "../pages/api/workData.json";
 import ImageSlider from "./ImageSlider";
+import curtainBangs from "../assets/curtain-bangs.jpeg";
+import theModern from "../assets/the-modern.jpeg";
+import bobCut from "../assets/bob-cut.jpeg";
+import lowlights from "../assets/lowlights.jpeg";
+import boy from "../assets/boy.jpeg";
+import frenchBob from "../assets/french-bob.jpeg";
+import ladyFaceShot from "../assets/lady-face-shot.jpeg";
 
 const Work = () => {
+  const slides = [
+    {
+      title: "Curtain Bangs",
+      link: "https://www.instagram.com/p/ClRxiU0SrxD/",
+      desc: "Literally laziest hairstyle ever. For those who’s time restrained but looking for a modern touch",
+      imageUrl: curtainBangs,
+    },
+    {
+      title: "The Modern",
+      link: "https://www.instagram.com/p/ClEv13lBmS6/",
+      desc: "If there’s a name for this hairstyle, I would call this the modern #jenniferaniston #layerlob",
+      imageUrl: theModern,
+    },
+    {
+      title: "Bob cut",
+      link: "https://www.instagram.com/p/CkbTJgOJMvr/",
+      desc: "Playing around with #asymmetricalbob #naturallysilver #bobhaircut",
+      imageUrl: bobCut,
+    },
+    {
+      title: "Lowlights",
+      link: "https://www.instagram.com/p/CkCXRrspVt-/",
+      desc: "Keep your blonde locks, just add some lowlights for more depth and richness.",
+      imageUrl: lowlights,
+    },
+    {
+      title: "Boy",
+      link: "https://www.instagram.com/p/Cb2yC7uLSL8/",
+      desc: "Playing around with #asymmetricalbob #naturallysilver #bobhaircut",
+      imageUrl: boy,
+    },
+    {
+      title: "French Bob",
+      link: "https://www.instagram.com/p/Ce1iPSqPlrC/",
+      desc: "A little enhancement and voila",
+      imageUrl: frenchBob,
+    },
+
+    {
+      title: "Lady Face shot",
+      link: "https://www.instagram.com/p/CaScpfKpSyi/",
+      desc: "Playing around with #asymmetricalbob #naturallysilver #bobhaircut",
+      imageUrl: ladyFaceShot,
+    },
+
+    {
+      title: "Boy",
+      link: "https://www.instagram.com/p/Cb2yC7uLSL8/",
+      imageUrl: boy,
+    },
+    {
+      title: "French Bob",
+      link: "https://www.instagram.com/p/Ce1iPSqPlrC/",
+      imageUrl: frenchBob,
+    },
+
+    {
+      title: "Lady Face shot",
+      link: "https://www.instagram.com/p/CaScpfKpSyi/",
+      imageUrl: ladyFaceShot,
+    },
+  ];
   // follow along for carousel at https://robkendal.co.uk/blog/how-to-build-a-multi-image-carousel-in-react-and-tailwind
   // const maxScrollWidth = useRef(0);
   // const [currentIndex, setCurrentIndex] = useState(0);
@@ -167,7 +235,7 @@ const Work = () => {
     <section id="work" className="workSlider">
       <h2>Check Out My Work</h2>
 
-      <ImageSlider slides={data.resources} />
+      <ImageSlider slides={slides} />
     </section>
   );
 };
