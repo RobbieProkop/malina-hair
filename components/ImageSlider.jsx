@@ -1,8 +1,24 @@
 import Image from "next/image";
 import { useState } from "react";
+import curtainBangs from "../assets/curtain-bangs.jpeg";
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slides = [
+    {
+      title: "Curtain Bangs",
+      link: "https://www.instagram.com/p/ClRxiU0SrxD/",
+      desc: "Literally laziest hairstyle ever. For those who’s time restrained but looking for a modern touch",
+      imageUrl: curtainBangs,
+    },
+    {
+      title: "The Modern",
+      link: "https://www.instagram.com/p/ClEv13lBmS6/",
+      desc: "If there’s a name for this hairstyle, I would call this the modern #jenniferaniston #layerlob",
+      imageUrl: "/../assets/the-modern.jpeg",
+    },
+  ];
 
   const movePrev = () => {
     const isFirstSlide = currentIndex === 0;
